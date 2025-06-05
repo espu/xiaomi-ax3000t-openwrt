@@ -18,6 +18,8 @@ rm -rf feeds/luci/themes/luci-theme-netgear
 rm -rf feeds/luci/applications/luci-app-mosdns
 rm -rf feeds/luci/applications/luci-app-netdata
 rm -rf feeds/luci/applications/luci-app-serverchan
+# DIY rm
+rm -rf feeds/luci/applications/luci-app-ssr-plus
 
 # Git稀疏克隆，只克隆指定目录到本地
 function git_sparse_clone() {
