@@ -33,27 +33,13 @@ function git_sparse_clone() {
 
 # 添加额外插件
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
-git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
-git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/luci-app-netdata
-
-# 科学上网插件
-# git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app-ssr-plus
-# git clone --depth=1 -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
-# git clone --depth=1 https://github.com/pymumu/openwrt-smartdns package/smartdns
+# git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
+# git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/luci-app-netdata
 
 
-# Add a feed source
-# echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-#echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+# Add a passwall feed source
 echo 'src-git passwall_luci https://github.com/xiaorouji/openwrt-passwall.git' >>feeds.conf.default
 echo 'src-git passwall_package https://github.com/xiaorouji/openwrt-passwall-packages' >>feeds.conf.default
-
-sed -i "/helloworld/d" "feeds.conf.default"
-echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
-
-
-#git_sparse_clone main https://github.com/linkease/nas-packages-luci luci/luci-app-ddnsto
-#git_sparse_clone master https://github.com/linkease/nas-packages network/services/ddnsto
 
 # iStore
 # git_sparse_clone main https://github.com/linkease/istore-ui app-store-ui
@@ -79,4 +65,9 @@ sed -i "s/luci-app-vlmcsd//g" include/target.mk
 
 ./scripts/feeds clean
 ./scripts/feeds update -a
+# Description: OpenWrt DIY script part 2 (After Update feeds)
+#
+
+# Modify default IP
+sed -i 's/192.168.1.1/192.168.11.1/g' package/base-files/luci2/bin/config_generate
 ./scripts/feeds install -a
