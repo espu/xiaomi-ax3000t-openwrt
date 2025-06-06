@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright (c) 2019-2020 P3TERX <https://p3terx.com>
+# Copyright (c) 2019- P3TERX <https://p3terx.com>
 #
 # This is free software, licensed under the MIT License.
 # See /LICENSE for more information.
@@ -18,7 +18,7 @@ rm -rf feeds/luci/themes/luci-theme-netgear
 rm -rf feeds/luci/applications/luci-app-mosdns
 rm -rf feeds/luci/applications/luci-app-netdata
 rm -rf feeds/luci/applications/luci-app-serverchan
-# DIY rm
+# DIY Network Tools
 rm -rf feeds/luci/applications/luci-app-ssr-plus
 
 # Git稀疏克隆，只克隆指定目录到本地
@@ -30,14 +30,14 @@ function git_sparse_clone() {
   mv -f $@ ../package
   cd .. && rm -rf $repodir
 }
+git_sparse_clone main https://github.com/linkease/istore-ui app-store-ui
+git_sparse_clone main https://github.com/linkease/istore luci
+
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # 添加额外插件
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
-# git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
-# git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/luci-app-netdata
-
 
 # Add a passwall feed source
 echo 'src-git passwall_luci https://github.com/xiaorouji/openwrt-passwall.git' >>feeds.conf.default
@@ -47,7 +47,7 @@ echo 'src-git passwall_package https://github.com/xiaorouji/openwrt-passwall-pac
 # git_sparse_clone main https://github.com/linkease/istore-ui app-store-ui
 # git_sparse_clone main https://github.com/linkease/istore luci
 
-# 在线用户
+# 在线用户 luci-app-onliner @nlbwmon
 git_sparse_clone main https://github.com/haiibo/packages luci-app-onliner
 sed -i '$i uci set nlbwmon.@nlbwmon[0].refresh_interval=2s' package/lean/default-settings/files/zzz-default-settings
 sed -i '$i uci commit nlbwmon' package/lean/default-settings/files/zzz-default-settings
@@ -67,9 +67,10 @@ sed -i "s/luci-app-vlmcsd//g" include/target.mk
 
 ./scripts/feeds clean
 ./scripts/feeds update -a
+
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
-
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.11.1/g' package/base-files/luci2/bin/config_generate
+
 ./scripts/feeds install -a
