@@ -92,10 +92,8 @@ git pull
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
-
+# 制作 Menu
 make menuconfig
-
-
 # ### 7再次编译
 
 # make download -j8
