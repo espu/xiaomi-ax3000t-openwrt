@@ -50,11 +50,15 @@ echo 'src-git passwall_package https://github.com/xiaorouji/openwrt-passwall-pac
 # git_sparse_clone main https://github.com/linkease/istore-ui app-store-ui
 # git_sparse_clone main https://github.com/linkease/istore luci
 
+sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
+sed -i '$a src-git NueXini_Packages https://github.com/NueXini/NueXini_Packages.git' feeds.conf.default
+
 # 在线用户 luci-app-onliner @nlbwmon
-# git_sparse_clone main https://github.com/haiibo/packages luci-app-onliner
-# sed -i '$i uci set nlbwmon.@nlbwmon[0].refresh_interval=2s' package/lean/default-settings/files/zzz-default-settings
-# sed -i '$i uci commit nlbwmon' package/lean/default-settings/files/zzz-default-settings
-# chmod 755 package/luci-app-onliner/root/usr/share/onliner/setnlbw.sh
+git_sparse_clone main https://github.com/haiibo/packages luci-app-onliner
+sed -i '$i uci set nlbwmon.@nlbwmon[0].refresh_interval=2s' package/lean/default-settings/files/zzz-default-settings
+sed -i '$i uci commit nlbwmon' package/lean/default-settings/files/zzz-default-settings
+chmod 755 package/luci-app-onliner/root/usr/share/onliner/setnlbw.sh
 
 # 修改版本为编译日期
 date_version=$(date +"%y.%m.%d")
@@ -67,8 +71,8 @@ sed -i "s/luci-app-vlmcsd//g" include/target.mk
 # ./scripts/feeds update helloworld
 # ./scripts/feeds install -a -f -p helloworld
 
-./scripts/feeds clean
-#./scripts/feeds update -a
+# 
+# ./scripts/feeds update -a
 
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
@@ -84,16 +88,11 @@ sed -i "s/luci-app-vlmcsd//g" include/target.mk
 
 # make download -j8
 # make V=s -j1
-
-sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
-sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
-sed -i '$a src-git NueXini_Packages https://github.com/NueXini/NueXini_Packages.git' feeds.conf.default
-git pull
-
+./scripts/feeds clean
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 # 制作 Menu
-make menuconfig
+
 # ### 7再次编译
 
 # make download -j8
