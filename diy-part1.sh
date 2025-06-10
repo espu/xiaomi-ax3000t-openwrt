@@ -44,8 +44,11 @@ sed -i '$a src-git NueXini_Packages https://github.com/NueXini/NueXini_Packages.
 
 
 # 添加额外插件
+
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 
+#Add a Openclash feed depencies
+git clone --depth=1 https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 # Add a passwall feed source
 echo 'src-git passwall_luci https://github.com/xiaorouji/openwrt-passwall.git' >>feeds.conf.default
 echo 'src-git passwall_package https://github.com/xiaorouji/openwrt-passwall-packages' >>feeds.conf.default
