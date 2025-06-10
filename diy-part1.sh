@@ -38,6 +38,10 @@ git_sparse_clone main https://github.com/linkease/istore luci
 
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
+sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
+sed -i '$a src-git NueXini_Packages https://github.com/NueXini/NueXini_Packages.git' feeds.conf.default
+
 
 # 添加额外插件
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
@@ -50,9 +54,7 @@ echo 'src-git passwall_package https://github.com/xiaorouji/openwrt-passwall-pac
 # git_sparse_clone main https://github.com/linkease/istore-ui app-store-ui
 # git_sparse_clone main https://github.com/linkease/istore luci
 
-sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
-sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
-sed -i '$a src-git NueXini_Packages https://github.com/NueXini/NueXini_Packages.git' feeds.conf.default
+
 
 # 在线用户 luci-app-onliner @nlbwmon
 git_sparse_clone main https://github.com/haiibo/packages luci-app-onliner
@@ -71,6 +73,9 @@ sed -i "s/luci-app-vlmcsd//g" include/target.mk
 # ./scripts/feeds update helloworld
 # ./scripts/feeds install -a -f -p helloworld
 
+./scripts/feeds clean
+./scripts/feeds update -a
+./scripts/feeds install -a
 # 
 # ./scripts/feeds update -a
 
@@ -88,9 +93,7 @@ sed -i "s/luci-app-vlmcsd//g" include/target.mk
 
 # make download -j8
 # make V=s -j1
-./scripts/feeds clean
-./scripts/feeds update -a
-./scripts/feeds install -a
+
 # 制作 Menu
 
 # ### 7再次编译
