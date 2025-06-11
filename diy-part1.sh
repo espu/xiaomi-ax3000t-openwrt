@@ -34,11 +34,10 @@ function git_sparse_clone() {
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
-sed -i '$a src-git NueXini_Packages https://github.com/NueXini/NueXini_Packages.git' feeds.conf.default
-
+# sed -i '$a src-git NueXini_Packages https://github.com/NueXini/NueXini_Packages.git' feeds.conf.default
 
 # 添加额外插件
-
+git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 #Add a Openclash feed source
 # git clone --depth=1 https://github.com/vernesong/OpenClash.git package/luci-app-openclash
@@ -61,7 +60,7 @@ chmod 755 package/luci-app-onliner/root/usr/share/onliner/setnlbw.sh
 # 修改版本为编译日期
 date_version=$(date +"%y.%m.%d")
 orig_version=$(cat "package/lean/default-settings/files/zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')
-sed -i "s/${orig_version}/R${date_version} by go-laoji/g" package/lean/default-settings/files/zzz-default-settings
+sed -i "s/${orig_version}/R${date_version} by espu/g" package/lean/default-settings/files/zzz-default-settings
 
 # 移除默认安装的vsftpd、vlmcsd
 sed -i "s/luci-app-vsftpd//g" include/target.mk
@@ -70,21 +69,21 @@ sed -i "s/luci-app-vlmcsd//g" include/target.mk
 # ./scripts/feeds install -a -f -p helloworld
 
 ./scripts/feeds clean
-
-# 移除失效的包
-rm -rf feeds/NueXini_Packages/luci-app-3proxy
-rm -rf feeds/NueXini_Packages/luci-app-atinout  
-rm -rf feeds/NueXini_Packages/luci-app-cellled
-rm -rf feeds/NueXini_Packages/luci-app-cloudflarespeedtest
-rm -rf feeds/NueXini_Packages/luci-app-homeredirect
-rm -rf feeds/NueXini_Packages/luci-app-modeminfo
-rm -rf feeds/NueXini_Packages/luci-app-pingcontrol
-rm -rf feeds/NueXini_Packages/luci-app-telegrambot
-rm -rf feeds/NueXini_Packages/luci-proto-tun2socks
-rm -rf feeds/NueXini_Packages/luci-proto-xmm
-
 ./scripts/feeds update -a
 ./scripts/feeds install -a
+# 移除失效的包
+# rm -rf feeds/NueXini_Packages/luci-app-3proxy
+# rm -rf feeds/NueXini_Packages/luci-app-atinout  
+# rm -rf feeds/NueXini_Packages/luci-app-cellled
+# rm -rf feeds/NueXini_Packages/luci-app-cloudflarespeedtest
+# rm -rf feeds/NueXini_Packages/luci-app-homeredirect
+# rm -rf feeds/NueXini_Packages/luci-app-modeminfo
+# rm -rf feeds/NueXini_Packages/luci-app-pingcontrol
+# rm -rf feeds/NueXini_Packages/luci-app-telegrambot
+# rm -rf feeds/NueXini_Packages/luci-proto-tun2socks
+# rm -rf feeds/NueXini_Packages/luci-proto-xmm
+
+
 # 
 # ./scripts/feeds update -a
 
