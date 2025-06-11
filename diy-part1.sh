@@ -15,15 +15,11 @@ rm -rf feeds/packages/net/msd_lite
 rm -rf feeds/packages/net/smartdns
 rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf feeds/luci/themes/luci-theme-netgear
-rm -rf feeds/luci/applications/luci-app-mosdns
-rm -rf feeds/luci/applications/luci-app-netdata
-rm -rf feeds/luci/applications/luci-app-serverchan
+rm -rf feeds/NueXini_Packages/luci-app-mosdns
+rm -rf feeds/NueXini_Packages/luci-app-netdata
+rm -rf feeds/NueXini_Packages/luci-app-serverchan
 # DIY Network Tools
-rm -rf feeds/luci/applications/luci-app-ssr-plus
-
-
-
-
+rm -rf feeds/NueXini_Packages/luci-app-ssr-plus
 # Git稀疏克隆，只克隆指定目录到本地
 function git_sparse_clone() {
   branch="$1" repourl="$2" && shift 2
@@ -74,6 +70,19 @@ sed -i "s/luci-app-vlmcsd//g" include/target.mk
 # ./scripts/feeds install -a -f -p helloworld
 
 ./scripts/feeds clean
+
+# 移除失效的包
+rm -rf feeds/NueXini_Packages/luci-app-3proxy
+rm -rf feeds/NueXini_Packages/luci-app-atinout  
+rm -rf feeds/NueXini_Packages/luci-app-cellled
+rm -rf feeds/NueXini_Packages/luci-app-cloudflarespeedtest
+rm -rf feeds/NueXini_Packages/luci-app-homeredirect
+rm -rf feeds/NueXini_Packages/luci-app-modeminfo
+rm -rf feeds/NueXini_Packages/luci-app-pingcontrol
+rm -rf feeds/NueXini_Packages/luci-app-telegrambot
+rm -rf feeds/NueXini_Packages/luci-proto-tun2socks
+rm -rf feeds/NueXini_Packages/luci-proto-xmm
+
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 # 
