@@ -74,16 +74,16 @@ sed -i "s/luci-app-vlmcsd//g" include/target.mk
 
 # 彻底移除有问题的包和相关依赖
 rm -rf feeds/small/luci-app-ssr-plus
-rm -rf feeds/small/dns2socks-rust 2>/dev/null || true
-rm -rf package/feeds/small/luci-app-ssr-plus 2>/dev/null || true
+rm -rf feeds/small/dns2socks-rust
+# rm -rf package/feeds/small/luci-app-ssr-plus 2>/dev/null || true
 
 # 移除可能导致递归依赖的包
-rm -rf feeds/*/nikki 2>/dev/null || true
-rm -rf feeds/*/geoview 2>/dev/null || true
-rm -rf package/feeds/*/nikki 2>/dev/null || true
-rm -rf package/feeds/*/geoview 2>/dev/null || true
+# rm -rf feeds/*/nikki 2>/dev/null || true
+# rm -rf feeds/*/geoview 2>/dev/null || true
+# rm -rf package/feeds/*/nikki 2>/dev/null || true
+# rm -rf package/feeds/*/geoview 2>/dev/null || true
 
-echo "已移除有问题的包，建议使用 passwall 作为替代方案"
+# echo "已移除有问题的包，建议使用 passwall 作为替代方案"
 # rm -rf feeds/NueXini_Packages/luci-app-3proxy
 # rm -rf feeds/NueXini_Packages/luci-app-atinout  
 # rm -rf feeds/NueXini_Packages/luci-app-cellled
