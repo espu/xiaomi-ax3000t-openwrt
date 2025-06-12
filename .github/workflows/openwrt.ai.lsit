@@ -1,0 +1,27 @@
+
+
+
+# URL:: https://openwrt.ai/?target=mediatek%2Ffilogic&id=xiaomi_mi-router-ax3000t
+
+出厂软件包
+
+autocore base-files bash block-mount ca-bundle coremark curl dnsmasq-full dropbear ds-lite firewall4 fitblk fstools htop kmod-crypto-hw-safexcel kmod-gpio-button-hotplug kmod-leds-gpio kmod-lib-zstd kmod-mt7915e kmod-mt7981-firmware kmod-phy-aquantia kmod-tcp-bbr libc libgcc libustream-mbedtls logd luci-app-advancedplus luci-app-fan luci-app-filemanager luci-app-firewall luci-app-log-viewer luci-app-package-manager luci-app-syscontrol luci-app-upnp luci-app-wizard luci-base luci-compat luci-lib-fs luci-lib-ipkg luci-proto-wireguard mt7981-wo-firmware mtd nano netifd odhcp6c odhcpd-ipv6only openssh-sftp-server opkg ppp ppp-mod-pppoe resolveip swconfig uboot-envtools uci uclient-fetch urandom-seed urngd wget-ssl wpad-basic-mbedtls zram-swap
+去除出厂软件包, 请在所需软件包框中输入 -包名 如 -nano 过度精简可能导致固件出现不可预知的问题.
+
+-nano 
+
+定制软件包 (10539个可用 包名用空格隔开)
+
+
+
+luci-app-store luci-app-watchcat luci-app-taskplan luci-app-ddns-go luci-app-nlbwmon luci-theme-teleofis luci-app-ttyd luci-app-wrtbwmon luci-app-ap-modem -nano luci-app-netdata
+
+
+
+
+
+
+
+################### ############################ ###########
+
+luci-app-accesscontrol-plus 访问控制 luci-app-acme https证书申请 luci-app-adbyby-plus adbyby去广告 luci-app-adguardhome ADG去广告 luci-app-airplay2 Airplay2音箱 luci-app-alist 多存储文件列表 luci-app-aliyundrive-webdav 阿里云盘WebDAV luci-app-ap-modem 访问AP/光猫 luci-app-aria2 Aria2下载工具 luci-app-arpbind ARP绑定 luci-app-broadbandacc 宽带提速 luci-app-cifs-mount 共享盘挂载 luci-app-clouddrive2 多云盘管理工具 luci-app-cpulimit CPU占用率限制 luci-app-cloudreve 多存储网盘 luci-app-daed dae透明代理 luci-app-ddns 动态域名解析 luci-app-ddns-go 动态域名解析 luci-app-ddnsto 内网穿透 luci-app-diskman 磁盘管理 luci-app-dufs 支持WebDAV的文件管理 luci-app-easymesh Mesh组网 luci-app-easytier 异地组网 luci-app-eqosplus IP限速 luci-app-filebrowser-go 文件管理 luci-app-frpc 内网穿透 luci-app-frps luci-app-guest-wifi访客WIFI luci-app-hd-idle 硬盘休眠 luci-app-homeassistant 智能家居 luci-app-ipsec-server luci-app-iptvhelper IPTV助手 luci-app-kodexplorer 可道云网盘 luci-app-ksmbd 内核级文件共享 luci-app-linkease 易有云盘 luci-app-lucky Lucy多功能网络工具 luci-app-minidlna luci-app-mosdns DNS转发 luci-app-msd_lite IPTV组播 luci-app-mwan3 负载均衡 luci-app-my-dnshelper DNS管理与去广告 luci-app-natmap 内网穿透 luci-app-npc NPS内网穿透客户端 luci-app-netdata 性能监测 luci-app-netspeedtest 内网/宽带测速 luci-app-nlbwmon 流量统计 luci-app-oaf 应用过滤 luci-app-openvpn-server luci-app-p910nd USB打印机 luci-app-parentcontrol家长控制 luci-app-partexp分区扩容 luci-app-qbittorrent BT下载工具 luci-app-qosmate Qos流量控制 luci-app-rclone 云盘挂载同步 luci-app-samba4 samba文件共享 luci-app-wechatpush 通知推送 luci-app-smartdns luci-app-snmpd luci-app-socat端口转发 luci-app-softethervpn luci-app-sqm-autorate Qos流量控制 luci-app-statistics collectd系统监控统计 luci-app-cupsd CUPS打印服务 luci-app-store iStore(仅作 系统->软件包 的补充) luci-app-subconverter 订阅转换 luci-app-syncdial 多拨 luci-app-tailscale Tailscale虚拟组网 luci-app-taskplan 定时/开机任务 luci-app-thunder 迅雷下载 luci-app-timedreboot 定时重启 luci-app-timewol 网络唤醒 luci-app-transmission BT下载 luci-app-ttyd 网页版命令行 luci-app-turboacc 网络加速 luci-app-unblockneteasemusic 解锁网易云音乐 luci-app-unishare 多种文件共享 luci-app-uugamebooster UU游戏加速器 luci-app-vlmcsd KMS服务器 luci-app-vsftpd FTP服务器 luci-app-watchcat 断网检测重启 luci-app-webdav 基于Nginx的WebDAV luci-app-apfree-wifidog 无线认证 luci-app-wifischedule WiFi计划 luci-app-wireguard luci-app-wrtbwmon 流量监控 luci-app-xlnetacc 迅雷快鸟 luci-app-xunyou 迅游加速器 luci-app-zerotier 内网穿透 luci-theme-argon 主题Argon luci-theme-alpha 主题Alpha luci-theme-design 主题neobird改版 luci-theme-edge 主题Edge luci-theme-material 主题Material luci-theme-material3 主题Material Design3 luci-theme-kucat 主题KuCat luci-theme-openmptcprouter 主题OpenMPTCProuter luci-theme-routerich 主题Routerich luci-theme-spectra 主题Spectra luci-theme-teleofis 主题Teleofis luci-theme-lightblue 主题Lightblue luci-theme-openwrt-2020 主题OpenWrt2020 luci-theme-openwrt 主题OpenWrt automount 自动挂载USB/硬盘 btop 性能监控 naiveproxy open-vm-tools qemu-ga tvhelper 盒子助手
