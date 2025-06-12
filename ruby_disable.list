@@ -6,3 +6,5 @@
 # CONFIG_PACKAGE_ruby-psych is not set
 # CONFIG_PACKAGE_ruby-stringio is not set
 # CONFIG_PACKAGE_ruby-yaml is not set
+
+# 对于128MBD的 linux系统 OpenWRT 固件, Ruby组件 是否有必要启用? 请给出合理的解释
