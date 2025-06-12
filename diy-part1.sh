@@ -18,12 +18,13 @@ rm -rf feeds/luci/themes/luci-theme-netgear
 rm -rf feeds/packages/luci-app-mosdns
 rm -rf feeds/packages/luci-app-netdata
 rm -rf feeds/packages/luci-app-serverchan
-
+rm -rf feeds/packages/luci-app-ssr-plus
+rm -rf feeds/small/luci-app-ssr-plus
 # rm -rf feeds/NueXini_Packages/luci-app-mosdns
 # rm -rf feeds/NueXini_Packages/luci-app-netdata
 # rm -rf feeds/NueXini_Packages/luci-app-serverchan
 # DIY Network Tools
-rm -rf feeds/NueXini_Packages/luci-app-ssr-plus
+# rm -rf feeds/NueXini_Packages/luci-app-ssr-plus
 # Git稀疏克隆，只克隆指定目录到本地
 function git_sparse_clone() {
   branch="$1" repourl="$2" && shift 2
@@ -75,6 +76,7 @@ sed -i "s/luci-app-vlmcsd//g" include/target.mk
 ./scripts/feeds clean
 # 移除失效的包
 rm -rf feeds/small/luci-app-ssr-plus
+rm -rf feeds/packages/luci-app-ssr-plus
 rm -rf feeds/small/dns2socks-rust
 # rm -rf feeds/NueXini_Packages/luci-app-3proxy
 # rm -rf feeds/NueXini_Packages/luci-app-atinout  
