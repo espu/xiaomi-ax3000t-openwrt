@@ -1,0 +1,1162 @@
+型号:	Xiaomi Mi Router AX3000T
+平台:	mediatek/filogic
+版本:	分支: 24.10-SNAPSHOT
+内核: 6.6.92
+生成日期:	2025-06-13 04:20:41
+说明:	后台: 192.168.5.1 或 kwrt/  密码: root
+历史版本:	
+
+构建日志
+输出日志:
+
+Building images for mediatek - Xiaomi Mi Router AX3000T
+Packages: iptables-nft luci-app-ap-modem luci-app-ddns-go luci-app-filemanager luci-app-istorex luci-app-nlbwmon luci-app-openclash luci-app-store luci-app-taskplan luci-app-ttyd luci-app-watchcat luci-app-wrtbwmon luci-nginx luci-theme-argon miniupnpd-nftables autocore base-files bash block-mount ca-bundle coremark curl dnsmasq-full dropbear ds-lite firewall4 fitblk fstools htop kernel kmod-crypto-hw-safexcel kmod-gpio-button-hotplug kmod-leds-gpio kmod-lib-zstd kmod-mt7915e kmod-mt7981-firmware kmod-phy-aquantia kmod-tcp-bbr libc libgcc libustream-mbedtls logd luci-app-advancedplus luci-app-fan luci-app-filemanager luci-app-firewall luci-app-log-viewer luci-app-package-manager luci-app-syscontrol luci-app-upnp luci-app-wizard luci-base luci-compat luci-lib-fs luci-lib-ipkg luci-proto-wireguard mt7981-wo-firmware mtd nano netifd odhcp6c odhcpd-ipv6only openssh-sftp-server opkg ppp ppp-mod-pppoe resolveip swconfig uboot-envtools uci uclient-fetch urandom-seed urngd wget-ssl wpad-basic-mbedtls zram-swap
+
+
+Installing packages...
+Installing libc (1.2.5-r4) to root...
+Installing libgcc1 (13.3.0-r4) to root...
+Downloading file:packages/libgcc1_13.3.0-r4_aarch64_cortex-a53.ipk
+Configuring libgcc1.
+Configuring libc.
+Installing kernel (6.6.92~1-r1) to root...
+Configuring kernel.
+Installing iptables-nft (1.8.10-r1) to root...
+Downloading file:packages/iptables-nft_1.8.10-r1_aarch64_cortex-a53.ipk
+Installing kmod-nf-reject (6.6.92-r1) to root...
+Downloading file:packages/kmod-nf-reject_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-nf-ipt (6.6.92-r1) to root...
+Downloading file:packages/kmod-nf-ipt_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-nf-log (6.6.92-r1) to root...
+Downloading file:packages/kmod-nf-log_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-ipt-core (6.6.92-r1) to root...
+Downloading file:packages/kmod-ipt-core_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing libmnl0 (1.0.5-r1) to root...
+Downloading file:packages/libmnl0_1.0.5-r1_aarch64_cortex-a53.ipk
+Installing libnftnl11 (1.2.8-r1) to root...
+Downloading file:packages/libnftnl11_1.2.8-r1_aarch64_cortex-a53.ipk
+Installing libxtables12 (1.8.10-r1) to root...
+Downloading file:packages/libxtables12_1.8.10-r1_aarch64_cortex-a53.ipk
+Installing libiptext0 (1.8.10-r1) to root...
+Downloading file:packages/libiptext0_1.8.10-r1_aarch64_cortex-a53.ipk
+Installing libiptext6-0 (1.8.10-r1) to root...
+Downloading file:packages/libiptext6-0_1.8.10-r1_aarch64_cortex-a53.ipk
+Installing libiptext-nft0 (1.8.10-r1) to root...
+Downloading file:packages/libiptext-nft0_1.8.10-r1_aarch64_cortex-a53.ipk
+Installing kmod-nfnetlink (6.6.92-r1) to root...
+Downloading file:packages/kmod-nfnetlink_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-nf-reject6 (6.6.92-r1) to root...
+Downloading file:packages/kmod-nf-reject6_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-nf-conntrack (6.6.92-r1) to root...
+Downloading file:packages/kmod-nf-conntrack_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-nf-conntrack6 (6.6.92-r1) to root...
+Downloading file:packages/kmod-nf-conntrack6_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-nf-nat (6.6.92-r1) to root...
+Downloading file:packages/kmod-nf-nat_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-nf-log6 (6.6.92-r1) to root...
+Downloading file:packages/kmod-nf-log6_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-crypto-hash (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-hash_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-crypto-crc32c (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-crc32c_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-lib-crc32c (6.6.92-r1) to root...
+Downloading file:packages/kmod-lib-crc32c_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-nft-core (6.6.92-r1) to root...
+Downloading file:packages/kmod-nft-core_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-nft-compat (6.6.92-r1) to root...
+Downloading file:packages/kmod-nft-compat_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing xtables-nft (1.8.10-r1) to root...
+Downloading file:packages/xtables-nft_1.8.10-r1_aarch64_cortex-a53.ipk
+Installing luci-app-ap-modem (1.0.5-20241208-r6) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/kiddin9/luci-app-ap-modem_1.0.5-20241208-r6_all.ipk
+Installing luci-app-ddns-go (26.105.65729~ff1ff84) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/kiddin9/luci-app-ddns-go_26.105.65729~ff1ff84_all.ipk
+Installing ca-bundle (20241223-r1) to root...
+Downloading file:packages/ca-bundle_20241223-r1_all.ipk
+Installing ddns-go (6.10.0-r15) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/kiddin9/ddns-go_6.10.0-r15_aarch64_cortex-a53.ipk
+Installing luci-app-filemanager (26.150.60207~e459c57) to root...
+Downloading file:packages/luci-app-filemanager_26.150.60207~e459c57_all.ipk
+Installing libubox20240329 (2024.03.29~eb9bcb64-r1) to root...
+Downloading file:packages/libubox20240329_2024.03.29~eb9bcb64-r1_aarch64_cortex-a53.ipk
+Installing libubus20250102 (2025.01.02~afa57cce-r1) to root...
+Downloading file:packages/libubus20250102_2025.01.02~afa57cce-r1_aarch64_cortex-a53.ipk
+Installing libuci20250120 (2025.01.20~16ff0bad-r1) to root...
+Downloading file:packages/libuci20250120_2025.01.20~16ff0bad-r1_aarch64_cortex-a53.ipk
+Installing libjson-c5 (0.18-r1) to root...
+Downloading file:packages/libjson-c5_0.18-r1_aarch64_cortex-a53.ipk
+Installing libblobmsg-json20240329 (2024.03.29~eb9bcb64-r1) to root...
+Downloading file:packages/libblobmsg-json20240329_2024.03.29~eb9bcb64-r1_aarch64_cortex-a53.ipk
+Installing rpcd (2024.09.17~9f4b86e7-r1) to root...
+Downloading file:packages/rpcd_2024.09.17~9f4b86e7-r1_aarch64_cortex-a53.ipk
+Installing rpcd-mod-file (2024.09.17~9f4b86e7-r1) to root...
+Downloading file:packages/rpcd-mod-file_2024.09.17~9f4b86e7-r1_aarch64_cortex-a53.ipk
+Installing libnl-tiny1 (2025.03.19~c0df580a-r1) to root...
+Downloading file:packages/libnl-tiny1_2025.03.19~c0df580a-r1_aarch64_cortex-a53.ipk
+Installing rpcd-mod-luci (20240305-r1) to root...
+Downloading file:packages/rpcd-mod-luci_20240305-r1_aarch64_cortex-a53.ipk
+Installing libucode20230711 (2025.02.10~a8a11aea-r1) to root...
+Downloading file:packages/libucode20230711_2025.02.10~a8a11aea-r1_aarch64_cortex-a53.ipk
+Installing rpcd-mod-ucode (2024.09.17~9f4b86e7-r1) to root...
+Downloading file:packages/rpcd-mod-ucode_2024.09.17~9f4b86e7-r1_aarch64_cortex-a53.ipk
+Installing cgi-io (2022.08.10~901b0f04-r21) to root...
+Downloading file:packages/cgi-io_2022.08.10~901b0f04-r21_aarch64_cortex-a53.ipk
+Installing ucode (2025.02.10~a8a11aea-r1) to root...
+Downloading file:packages/ucode_2025.02.10~a8a11aea-r1_aarch64_cortex-a53.ipk
+Installing ucode-mod-fs (2025.02.10~a8a11aea-r1) to root...
+Downloading file:packages/ucode-mod-fs_2025.02.10~a8a11aea-r1_aarch64_cortex-a53.ipk
+Installing ucode-mod-uci (2025.02.10~a8a11aea-r1) to root...
+Downloading file:packages/ucode-mod-uci_2025.02.10~a8a11aea-r1_aarch64_cortex-a53.ipk
+Installing ucode-mod-ubus (2025.02.10~a8a11aea-r1) to root...
+Downloading file:packages/ucode-mod-ubus_2025.02.10~a8a11aea-r1_aarch64_cortex-a53.ipk
+Installing ucode-mod-math (2025.02.10~a8a11aea-r1) to root...
+Downloading file:packages/ucode-mod-math_2025.02.10~a8a11aea-r1_aarch64_cortex-a53.ipk
+Installing ucode-mod-html (1) to root...
+Downloading file:packages/ucode-mod-html_1_aarch64_cortex-a53.ipk
+Installing liblucihttp0 (2023.03.15~9b5b683f-r1) to root...
+Downloading file:packages/liblucihttp0_2023.03.15~9b5b683f-r1_aarch64_cortex-a53.ipk
+Installing liblucihttp-ucode (2023.03.15~9b5b683f-r1) to root...
+Downloading file:packages/liblucihttp-ucode_2023.03.15~9b5b683f-r1_aarch64_cortex-a53.ipk
+Installing luci-base (26.150.60207~e459c57) to root...
+Downloading file:packages/luci-base_26.150.60207~e459c57_aarch64_cortex-a53.ipk
+Installing luci-app-istorex (0.6.6-r5) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/kiddin9/luci-app-istorex_0.6.6-r5_all.ipk
+Installing ubusd (2025.01.02~afa57cce-r1) to root...
+Downloading file:packages/ubusd_2025.01.02~afa57cce-r1_aarch64_cortex-a53.ipk
+Installing ubus (2025.01.02~afa57cce-r1) to root...
+Downloading file:packages/ubus_2025.01.02~afa57cce-r1_aarch64_cortex-a53.ipk
+Installing libjson-script20240329 (2024.03.29~eb9bcb64-r1) to root...
+Downloading file:packages/libjson-script20240329_2024.03.29~eb9bcb64-r1_aarch64_cortex-a53.ipk
+Installing ubox (2024.04.26~85f10530-r1) to root...
+Downloading file:packages/ubox_2024.04.26~85f10530-r1_aarch64_cortex-a53.ipk
+Installing libudebug (2023.12.06~6d3f51f9) to root...
+Downloading file:packages/libudebug_2023.12.06~6d3f51f9_aarch64_cortex-a53.ipk
+Installing jshn (2024.03.29~eb9bcb64-r1) to root...
+Downloading file:packages/jshn_2024.03.29~eb9bcb64-r1_aarch64_cortex-a53.ipk
+Installing procd (2024.12.22~42d39376-r1) to root...
+Downloading file:packages/procd_2024.12.22~42d39376-r1_aarch64_cortex-a53.ipk
+Installing libpthread (1.2.5-r4) to root...
+Downloading file:packages/libpthread_1.2.5-r4_aarch64_cortex-a53.ipk
+Installing librt (1.2.5-r4) to root...
+Downloading file:packages/librt_1.2.5-r4_aarch64_cortex-a53.ipk
+Installing script-utils (2.40.2-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/base/script-utils_2.40.2-r1_aarch64_cortex-a53.ipk
+Installing coreutils (9.3-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/coreutils_9.3-r1_aarch64_cortex-a53.ipk
+Installing coreutils-stty (9.3-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/coreutils-stty_9.3-r1_aarch64_cortex-a53.ipk
+Installing taskd (1.0.3-r3) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/kiddin9/taskd_1.0.3-r3_all.ipk
+Installing liblua5.1.5 (5.1.5-r11) to root...
+Downloading file:packages/liblua5.1.5_5.1.5-r11_aarch64_cortex-a53.ipk
+Installing lua (5.1.5-r11) to root...
+Downloading file:packages/lua_5.1.5-r11_aarch64_cortex-a53.ipk
+Installing luci-lib-nixio (26.150.60207~e459c57) to root...
+Downloading file:packages/luci-lib-nixio_26.150.60207~e459c57_aarch64_cortex-a53.ipk
+Installing luci-lib-ip (26.150.60207~e459c57) to root...
+Downloading file:packages/luci-lib-ip_26.150.60207~e459c57_aarch64_cortex-a53.ipk
+Installing luci-lib-jsonc (26.150.60207~e459c57) to root...
+Downloading file:packages/luci-lib-jsonc_26.150.60207~e459c57_aarch64_cortex-a53.ipk
+Installing liblucihttp-lua (2023.03.15~9b5b683f-r1) to root...
+Downloading file:packages/liblucihttp-lua_2023.03.15~9b5b683f-r1_aarch64_cortex-a53.ipk
+Installing luci-lib-base (26.150.60207~e459c57) to root...
+Downloading file:packages/luci-lib-base_26.150.60207~e459c57_all.ipk
+Installing libubus-lua (2025.01.02~afa57cce-r1) to root...
+Downloading file:packages/libubus-lua_2025.01.02~afa57cce-r1_aarch64_cortex-a53.ipk
+Installing ucode-mod-lua (1) to root...
+Downloading file:packages/ucode-mod-lua_1_aarch64_cortex-a53.ipk
+Installing luci-lua-runtime (26.150.60207~e459c57) to root...
+Downloading file:packages/luci-lua-runtime_26.150.60207~e459c57_aarch64_cortex-a53.ipk
+Installing luci-lib-xterm (4.18.0-r2) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/kiddin9/luci-lib-xterm_4.18.0-r2_all.ipk
+Installing luci-lib-taskd (1.0.23-r4) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/kiddin9/luci-lib-taskd_1.0.23-r4_all.ipk
+Installing shadow-utils (4.8.1-r3) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/shadow-utils_4.8.1-r3_aarch64_cortex-a53.ipk
+Installing shadow-common (4.8.1-r3) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/shadow-common_4.8.1-r3_aarch64_cortex-a53.ipk
+Installing shadow-useradd (4.8.1-r3) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/shadow-useradd_4.8.1-r3_aarch64_cortex-a53.ipk
+Installing libuuid1 (2.40.2-r1) to root...
+Downloading file:packages/libuuid1_2.40.2-r1_aarch64_cortex-a53.ipk
+Installing libblkid1 (2.40.2-r1) to root...
+Downloading file:packages/libblkid1_2.40.2-r1_aarch64_cortex-a53.ipk
+Installing libmount1 (2.40.2-r1) to root...
+Downloading file:packages/libmount1_2.40.2-r1_aarch64_cortex-a53.ipk
+Installing libsmartcols1 (2.40.2-r1) to root...
+Downloading file:packages/libsmartcols1_2.40.2-r1_aarch64_cortex-a53.ipk
+Installing mount-utils (2.40.2-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/base/mount-utils_2.40.2-r1_aarch64_cortex-a53.ipk
+Installing block-mount (2024.01.22~08cd7083-r5) to root...
+Downloading file:packages/block-mount_2024.01.22~08cd7083-r5_aarch64_cortex-a53.ipk
+Installing terminfo (6.4-r2) to root...
+Downloading file:packages/terminfo_6.4-r2_aarch64_cortex-a53.ipk
+Installing libncurses6 (6.4-r2) to root...
+Downloading file:packages/libncurses6_6.4-r2_aarch64_cortex-a53.ipk
+Installing lsblk (2.40.2-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/base/lsblk_2.40.2-r1_aarch64_cortex-a53.ipk
+Installing libcomerr0 (1.47.0-r2) to root...
+Downloading file:packages/libcomerr0_1.47.0-r2_aarch64_cortex-a53.ipk
+Installing libss2 (1.47.0-r2) to root...
+Downloading file:packages/libss2_1.47.0-r2_aarch64_cortex-a53.ipk
+Installing libext2fs2 (1.47.0-r2) to root...
+Downloading file:packages/libext2fs2_1.47.0-r2_aarch64_cortex-a53.ipk
+Installing libe2p2 (1.47.0-r2) to root...
+Downloading file:packages/libe2p2_1.47.0-r2_aarch64_cortex-a53.ipk
+Installing e2fsprogs (1.47.0-r2) to root...
+Downloading file:packages/e2fsprogs_1.47.0-r2_aarch64_cortex-a53.ipk
+Installing libparted (3.6-r1) to root...
+Downloading file:packages/libparted_3.6-r1_aarch64_cortex-a53.ipk
+Installing libreadline8 (8.2-r2) to root...
+Downloading file:packages/libreadline8_8.2-r2_aarch64_cortex-a53.ipk
+Installing parted (3.6-r1) to root...
+Downloading file:packages/parted_3.6-r1_aarch64_cortex-a53.ipk
+Installing libstdcpp6 (13.3.0-r4) to root...
+Downloading file:packages/libstdcpp6_13.3.0-r4_aarch64_cortex-a53.ipk
+Installing smartmontools (7.4-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/smartmontools_7.4-r1_aarch64_cortex-a53.ipk
+Installing smartd (7.4-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/smartd_7.4-r1_aarch64_cortex-a53.ipk
+Installing kmod-md-mod (6.6.92-r1) to root...
+Downloading file:packages/kmod-md-mod_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-md-raid0 (6.6.92-r1) to root...
+Downloading file:packages/kmod-md-raid0_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-md-raid10 (6.6.92-r1) to root...
+Downloading file:packages/kmod-md-raid10_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-md-raid1 (6.6.92-r1) to root...
+Downloading file:packages/kmod-md-raid1_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing mdadm (4.3-r2) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/base/mdadm_4.3-r2_aarch64_cortex-a53.ipk
+Installing zlib (1.3.1-r1) to root...
+Downloading file:packages/zlib_1.3.1-r1_aarch64_cortex-a53.ipk
+Installing libelf1 (0.192-r1) to root...
+Downloading file:packages/libelf1_0.192-r1_aarch64_cortex-a53.ipk
+Installing libbpf1 (1.5.0-r1) to root...
+Downloading file:packages/libbpf1_1.5.0-r1_aarch64_cortex-a53.ipk
+Installing ip-full (6.11.0-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/base/ip-full_6.11.0-r1_aarch64_cortex-a53.ipk
+Installing uci (2025.01.20~16ff0bad-r1) to root...
+Downloading file:packages/uci_2025.01.20~16ff0bad-r1_aarch64_cortex-a53.ipk
+Installing bash (5.2.32-r1) to root...
+Downloading file:packages/bash_5.2.32-r1_aarch64_cortex-a53.ipk
+Installing quickstart (0.10.3-r16) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/kiddin9/quickstart_0.10.3-r16_aarch64_cortex-a53.ipk
+Installing libcap (2.69-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/base/libcap_2.69-r1_aarch64_cortex-a53.ipk
+Installing libopenssl3 (3.0.16-r1) to root...
+Downloading file:packages/libopenssl3_3.0.16-r1_aarch64_cortex-a53.ipk
+Installing libuv1 (1.48.0-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/libuv1_1.48.0-r1_aarch64_cortex-a53.ipk
+Installing libwebsockets-full (4.3.3-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/libwebsockets-full_4.3.3-r1_aarch64_cortex-a53.ipk
+Installing ttyd (1.7.3-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/ttyd_1.7.3-r1_aarch64_cortex-a53.ipk
+Installing luci-app-ttyd (25.137.37373~691440a) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/luci/luci-app-ttyd_25.137.37373~691440a_all.ipk
+Installing luci-i18n-ttyd-zh-cn (25.137.37373~691440a) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/luci/luci-i18n-ttyd-zh-cn_25.137.37373~691440a_all.ipk
+Installing luci-app-quickstart (0.8.20-r1-r10) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/kiddin9/luci-app-quickstart_0.8.20-r1-r10_all.ipk
+Installing libnghttp2-14 (1.63.0-r1) to root...
+Downloading file:packages/libnghttp2-14_1.63.0-r1_aarch64_cortex-a53.ipk
+Installing libcurl4 (8.10.1-r1) to root...
+Downloading file:packages/libcurl4_8.10.1-r1_aarch64_cortex-a53.ipk
+Installing curl (8.10.1-r1) to root...
+Downloading file:packages/curl_8.10.1-r1_aarch64_cortex-a53.ipk
+Installing libuclient20201210 (2024.10.22~88ae8f20-r1) to root...
+Downloading file:packages/libuclient20201210_2024.10.22~88ae8f20-r1_aarch64_cortex-a53.ipk
+Installing uclient-fetch (2024.10.22~88ae8f20-r1) to root...
+Downloading file:packages/uclient-fetch_2024.10.22~88ae8f20-r1_aarch64_cortex-a53.ipk
+Installing opkg (2024.10.16~38eccbb1-r1) to root...
+Downloading file:packages/opkg_2024.10.16~38eccbb1-r1_aarch64_cortex-a53.ipk
+Installing luci-lib-ipkg (26.150.60207~e459c57) to root...
+Downloading file:packages/luci-lib-ipkg_26.150.60207~e459c57_all.ipk
+Installing xz-utils (5.6.2-r2) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/xz-utils_5.6.2-r2_aarch64_cortex-a53.ipk
+Installing liblzma (5.6.2-r2) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/liblzma_5.6.2-r2_aarch64_cortex-a53.ipk
+Installing xz (5.6.2-r2) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/xz_5.6.2-r2_aarch64_cortex-a53.ipk
+Installing libattr (2.5.2-r3) to root...
+Downloading file:packages/libattr_2.5.2-r3_aarch64_cortex-a53.ipk
+Installing libacl (2.3.2-r2) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/libacl_2.3.2-r2_aarch64_cortex-a53.ipk
+Installing libbz2-1.0 (1.0.8-r1) to root...
+Downloading file:packages/libbz2-1.0_1.0.8-r1_aarch64_cortex-a53.ipk
+Installing bzip2 (1.0.8-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/base/bzip2_1.0.8-r1_aarch64_cortex-a53.ipk
+Installing tar (1.35-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/tar_1.35-r1_aarch64_cortex-a53.ipk
+Installing libuci-lua (2025.01.20~16ff0bad-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/base/libuci-lua_2025.01.20~16ff0bad-r1_aarch64_cortex-a53.ipk
+Installing luci-app-store (0.1.29-4-r16) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/kiddin9/luci-app-store_0.1.29-4-r16_all.ipk
+Installing luci-app-nlbwmon (25.137.37373~691440a) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/luci/luci-app-nlbwmon_25.137.37373~691440a_all.ipk
+Installing luci-lib-chartjs (25.137.37373~691440a) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/luci/luci-lib-chartjs_25.137.37373~691440a_all.ipk
+Installing kmod-nf-conntrack-netlink (6.6.92-r1) to root...
+Downloading file:packages/kmod-nf-conntrack-netlink_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing nlbwmon (2024.02.21~c7616bcf-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/nlbwmon_2024.02.21~c7616bcf-r1_aarch64_cortex-a53.ipk
+Installing luci-app-openclash (0.46.086-r19) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/kiddin9/luci-app-openclash_0.46.086-r19_all.ipk
+Installing luci-compat (26.150.60207~e459c57) to root...
+Downloading file:packages/luci-compat_26.150.60207~e459c57_all.ipk
+Installing libgmp10 (6.3.0-r1) to root...
+Downloading file:packages/libgmp10_6.3.0-r1_aarch64_cortex-a53.ipk
+Installing libnettle8 (3.9.1-r1) to root...
+Downloading file:packages/libnettle8_3.9.1-r1_aarch64_cortex-a53.ipk
+Installing kmod-ipt-ipset (6.6.92-r1) to root...
+Downloading file:packages/kmod-ipt-ipset_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing libnfnetlink0 (1.0.2-r1) to root...
+Downloading file:packages/libnfnetlink0_1.0.2-r1_aarch64_cortex-a53.ipk
+Installing libnetfilter-conntrack3 (1.0.9-r2) to root...
+Downloading file:packages/libnetfilter-conntrack3_1.0.9-r2_aarch64_cortex-a53.ipk
+Installing dnsmasq-full (2.90-r4) to root...
+Downloading file:packages/dnsmasq-full_2.90-r4_aarch64_cortex-a53.ipk
+Installing libruby3.3 (3.3.5-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/libruby3.3_3.3.5-r1_aarch64_cortex-a53.ipk
+Installing ruby (3.3.5-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/ruby_3.3.5-r1_aarch64_cortex-a53.ipk
+Installing ruby-digest (3.3.5-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/ruby-digest_3.3.5-r1_aarch64_cortex-a53.ipk
+Installing ruby-enc (3.3.5-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/ruby-enc_3.3.5-r1_aarch64_cortex-a53.ipk
+Installing ruby-pstore (3.3.5-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/ruby-pstore_3.3.5-r1_aarch64_cortex-a53.ipk
+Installing ruby-bigdecimal (3.3.5-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/ruby-bigdecimal_3.3.5-r1_aarch64_cortex-a53.ipk
+Installing ruby-date (3.3.5-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/ruby-date_3.3.5-r1_aarch64_cortex-a53.ipk
+Installing ruby-stringio (3.3.5-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/ruby-stringio_3.3.5-r1_aarch64_cortex-a53.ipk
+Installing libyaml (0.2.5-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/libyaml_0.2.5-r1_aarch64_cortex-a53.ipk
+Installing ruby-psych (3.3.5-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/ruby-psych_3.3.5-r1_aarch64_cortex-a53.ipk
+Installing ruby-yaml (3.3.5-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/ruby-yaml_3.3.5-r1_aarch64_cortex-a53.ipk
+Installing kmod-inet-diag (6.6.92-r1) to root...
+Downloading file:packages/kmod-inet-diag_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-nf-tproxy (6.6.92-r1) to root...
+Downloading file:packages/kmod-nf-tproxy_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-nft-tproxy (6.6.92-r1) to root...
+Downloading file:packages/kmod-nft-tproxy_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-tun (6.6.92-r1) to root...
+Downloading file:packages/kmod-tun_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing unzip (6.0-r8) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/unzip_6.0-r8_aarch64_cortex-a53.ipk
+Package luci-app-store (0.1.29-4-r16) installed in root is up to date.
+Installing luci-app-taskplan (2.2.2-r7) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/kiddin9/luci-app-taskplan_2.2.2-r7_all.ipk
+Package luci-app-ttyd (25.137.37373~691440a) installed in root is up to date.
+Installing luci-app-watchcat (26.155.56748~9d68ca7) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/kiddin9/luci-app-watchcat_26.155.56748~9d68ca7_all.ipk
+Installing watchcat (1-r2) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/kiddin9/watchcat_1-r2_all.ipk
+Installing luci-app-wrtbwmon (2.0.13-r2) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/kiddin9/luci-app-wrtbwmon_2.0.13-r2_all.ipk
+Installing wrtbwmon (1.2.1-r3) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/kiddin9/wrtbwmon_1.2.1-r3_all.ipk
+Installing luci-nginx (25.137.37373~691440a) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/luci/luci-nginx_25.137.37373~691440a_all.ipk
+Installing libpcre2 (10.42-r1) to root...
+Downloading file:packages/libpcre2_10.42-r1_aarch64_cortex-a53.ipk
+Installing nginx-ssl-util (1.7-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/nginx-ssl-util_1.7-r1_aarch64_cortex-a53.ipk
+Installing libxml2 (2.13.4-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/base/libxml2_2.13.4-r1_aarch64_cortex-a53.ipk
+Installing nginx-ssl (1.26.1-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/nginx-ssl_1.26.1-r1_aarch64_cortex-a53.ipk
+Installing uwsgi (2.0.26-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/uwsgi_2.0.26-r1_aarch64_cortex-a53.ipk
+Installing uwsgi-syslog-plugin (2.0.26-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/uwsgi-syslog-plugin_2.0.26-r1_aarch64_cortex-a53.ipk
+Installing uwsgi-cgi-plugin (2.0.26-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/uwsgi-cgi-plugin_2.0.26-r1_aarch64_cortex-a53.ipk
+Installing uwsgi-luci-support (2.0.26-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/uwsgi-luci-support_2.0.26-r1_aarch64_cortex-a53.ipk
+Installing nginx-mod-ubus (1.26.1-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/nginx-mod-ubus_1.26.1-r1_aarch64_cortex-a53.ipk
+Installing nginx-mod-luci (1.26.1-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/nginx-mod-luci_1.26.1-r1_aarch64_cortex-a53.ipk
+Installing libiwinfo-data (2024.10.20~b94f066e-r1) to root...
+Downloading file:packages/libiwinfo-data_2024.10.20~b94f066e-r1_aarch64_cortex-a53.ipk
+Installing libiwinfo20230701 (2024.10.20~b94f066e-r1) to root...
+Downloading file:packages/libiwinfo20230701_2024.10.20~b94f066e-r1_aarch64_cortex-a53.ipk
+Installing rpcd-mod-iwinfo (2024.09.17~9f4b86e7-r1) to root...
+Downloading file:packages/rpcd-mod-iwinfo_2024.09.17~9f4b86e7-r1_aarch64_cortex-a53.ipk
+Installing luci-mod-status (26.150.60207~e459c57) to root...
+Downloading file:packages/luci-mod-status_26.150.60207~e459c57_aarch64_cortex-a53.ipk
+Installing luci-mod-system (26.150.60207~e459c57) to root...
+Downloading file:packages/luci-mod-system_26.150.60207~e459c57_all.ipk
+Installing luci-mod-network (26.150.60207~e459c57) to root...
+Downloading file:packages/luci-mod-network_26.150.60207~e459c57_all.ipk
+Installing luci-mod-admin-full (26.150.60207~e459c57) to root...
+Downloading file:packages/luci-mod-admin-full_26.150.60207~e459c57_all.ipk
+Installing luci-theme-bootstrap (26.150.60207~e459c57) to root...
+Downloading file:packages/luci-theme-bootstrap_26.150.60207~e459c57_all.ipk
+Installing kmod-nft-fib (6.6.92-r1) to root...
+Downloading file:packages/kmod-nft-fib_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-nf-flow (6.6.92-r1) to root...
+Downloading file:packages/kmod-nf-flow_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-nft-nat (6.6.92-r1) to root...
+Downloading file:packages/kmod-nft-nat_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-nft-offload (6.6.92-r1) to root...
+Downloading file:packages/kmod-nft-offload_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing jansson4 (2.14-r3) to root...
+Downloading file:packages/jansson4_2.14-r3_aarch64_cortex-a53.ipk
+Installing nftables-json (1.1.1-r1) to root...
+Downloading file:packages/nftables-json_1.1.1-r1_aarch64_cortex-a53.ipk
+Installing kmod-nf-ipt6 (6.6.92-r1) to root...
+Downloading file:packages/kmod-nf-ipt6_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-ip6tables (6.6.92-r1) to root...
+Downloading file:packages/kmod-ip6tables_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing libip4tc2 (1.8.10-r1) to root...
+Downloading file:packages/libip4tc2_1.8.10-r1_aarch64_cortex-a53.ipk
+Installing libip6tc2 (1.8.10-r1) to root...
+Downloading file:packages/libip6tc2_1.8.10-r1_aarch64_cortex-a53.ipk
+Installing xtables-legacy (1.8.10-r1) to root...
+Downloading file:packages/xtables-legacy_1.8.10-r1_aarch64_cortex-a53.ipk
+Installing ip6tables-zz-legacy (1.8.10-r1) to root...
+Downloading file:packages/ip6tables-zz-legacy_1.8.10-r1_aarch64_cortex-a53.ipk
+Installing kmod-nft-fullcone (6.6.92.2023.05.17~07d93b62-r2) to root...
+Downloading file:packages/kmod-nft-fullcone_6.6.92.2023.05.17~07d93b62-r2_aarch64_cortex-a53.ipk
+Installing kmod-nf-socket (6.6.92-r1) to root...
+Downloading file:packages/kmod-nf-socket_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-nft-socket (6.6.92-r1) to root...
+Downloading file:packages/kmod-nft-socket_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing firewall4 (2024.12.18~18fc0ead-r1) to root...
+Downloading file:packages/firewall4_2024.12.18~18fc0ead-r1_aarch64_cortex-a53.ipk
+Installing luci-app-firewall (26.150.60207~e459c57) to root...
+Downloading file:packages/luci-app-firewall_26.150.60207~e459c57_all.ipk
+Installing luci-app-package-manager (26.150.68089~d2b87f4) to root...
+Downloading file:packages/luci-app-package-manager_26.150.68089~d2b87f4_all.ipk
+Installing luci-proto-ppp (26.150.60207~e459c57) to root...
+Downloading file:packages/luci-proto-ppp_26.150.60207~e459c57_all.ipk
+Installing luci-proto-ipv6 (26.150.60207~e459c57) to root...
+Downloading file:packages/luci-proto-ipv6_26.150.60207~e459c57_all.ipk
+Installing rpcd-mod-rrdns (20170710) to root...
+Downloading file:packages/rpcd-mod-rrdns_20170710_aarch64_cortex-a53.ipk
+Installing luci-theme-argon (2.4.2-r6) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/kiddin9/luci-theme-argon_2.4.2-r6_all.ipk
+Installing jsonfilter (2025.04.18~8a86fb78-r1) to root...
+Downloading file:packages/jsonfilter_2025.04.18~8a86fb78-r1_aarch64_cortex-a53.ipk
+Installing miniupnpd-nftables (2.3.7-r8) to root...
+Downloading file:packages/miniupnpd-nftables_2.3.7-r8_aarch64_cortex-a53.ipk
+Installing libcap-ng (0.8.4-r1) to root...
+Downloading file:packages/libcap-ng_0.8.4-r1_aarch64_cortex-a53.ipk
+Installing autocore (5) to root...
+Downloading file:packages/autocore_5_aarch64_cortex-a53.ipk
+Installing base-files (1659~05.31.2025) to root...
+Downloading file:packages/base-files_1659~05.31.2025_aarch64_cortex-a53.ipk
+Installing netifd (2024.12.17~ea01ed41-r1) to root...
+Downloading file:packages/netifd_2024.12.17~ea01ed41-r1_aarch64_cortex-a53.ipk
+Installing ubi-utils (2.2.1-r1) to root...
+Downloading file:packages/ubi-utils_2.2.1-r1_aarch64_cortex-a53.ipk
+Installing fstools (2024.01.22~08cd7083-r5) to root...
+Downloading file:packages/fstools_2024.01.22~08cd7083-r5_aarch64_cortex-a53.ipk
+Installing fwtool (2019.11.12~8f7fe925-r1) to root...
+Downloading file:packages/fwtool_2019.11.12~8f7fe925-r1_aarch64_cortex-a53.ipk
+Installing procd-seccomp (2024.12.22~42d39376-r1) to root...
+Downloading file:packages/procd-seccomp_2024.12.22~42d39376-r1_aarch64_cortex-a53.ipk
+Installing busybox (1.36.1-r2) to root...
+Downloading file:packages/busybox_1.36.1-r2_aarch64_cortex-a53.ipk
+Package bash (5.2.32-r1) installed in root is up to date.
+Package block-mount (2024.01.22~08cd7083-r5) installed in root is up to date.
+Package ca-bundle (20241223-r1) installed in root is up to date.
+Installing coremark (2023.01.25~1f483d5b-r5) to root...
+Downloading file:packages/coremark_2023.01.25~1f483d5b-r5_aarch64_cortex-a53.ipk
+Package curl (8.10.1-r1) installed in root is up to date.
+Package dnsmasq-full (2.90-r4) installed in root is up to date.
+Installing dropbear (2024.86-r1) to root...
+Downloading file:packages/dropbear_2024.86-r1_aarch64_cortex-a53.ipk
+Installing ds-lite (9) to root...
+Downloading file:packages/ds-lite_9_all.ipk
+Installing kmod-iptunnel6 (6.6.92-r1) to root...
+Downloading file:packages/kmod-iptunnel6_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-ip6-tunnel (6.6.92-r1) to root...
+Downloading file:packages/kmod-ip6-tunnel_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing resolveip (2) to root...
+Downloading file:packages/resolveip_2_aarch64_cortex-a53.ipk
+Package firewall4 (2024.12.18~18fc0ead-r1) installed in root is up to date.
+Installing fitblk (2) to root...
+Downloading file:packages/fitblk_2_aarch64_cortex-a53.ipk
+Package fstools (2024.01.22~08cd7083-r5) installed in root is up to date.
+Installing htop (3.3.0-r2) to root...
+Downloading file:packages/htop_3.3.0-r2_aarch64_cortex-a53.ipk
+Package kernel (6.6.92~1-r1) installed in root is up to date.
+Installing kmod-crypto-hw-safexcel (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-hw-safexcel_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing eip197-mini-firmware (20241110-r2) to root...
+Downloading file:packages/eip197-mini-firmware_20241110-r2_aarch64_cortex-a53.ipk
+Installing kmod-crypto-null (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-null_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-crypto-aead (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-aead_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-crypto-manager (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-manager_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-crypto-authenc (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-authenc_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-crypto-des (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-des_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-crypto-md5 (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-md5_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-crypto-hmac (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-hmac_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-crypto-sha1 (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-sha1_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-crypto-sha256 (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-sha256_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-crypto-sha512 (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-sha512_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-gpio-button-hotplug (6.6.92-r5) to root...
+Downloading file:packages/kmod-gpio-button-hotplug_6.6.92-r5_aarch64_cortex-a53.ipk
+Installing kmod-leds-gpio (6.6.92-r1) to root...
+Downloading file:packages/kmod-leds-gpio_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-lib-zstd (6.6.92-r1) to root...
+Downloading file:packages/kmod-lib-zstd_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-crypto-acompress (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-acompress_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-lib-xxhash (6.6.92-r1) to root...
+Downloading file:packages/kmod-lib-xxhash_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-mt7915e (6.6.92.2025.02.14~e5fef138-r1) to root...
+Downloading file:packages/kmod-mt7915e_6.6.92.2025.02.14~e5fef138-r1_aarch64_cortex-a53.ipk
+Installing iw (6.9-r1) to root...
+Downloading file:packages/iw_6.9-r1_aarch64_cortex-a53.ipk
+Installing iwinfo (2024.10.20~b94f066e-r1) to root...
+Downloading file:packages/iwinfo_2024.10.20~b94f066e-r1_aarch64_cortex-a53.ipk
+Installing ucode-mod-nl80211 (2025.02.10~a8a11aea-r1) to root...
+Downloading file:packages/ucode-mod-nl80211_2025.02.10~a8a11aea-r1_aarch64_cortex-a53.ipk
+Installing ucode-mod-rtnl (2025.02.10~a8a11aea-r1) to root...
+Downloading file:packages/ucode-mod-rtnl_2025.02.10~a8a11aea-r1_aarch64_cortex-a53.ipk
+Installing wifi-scripts (1.0-r1) to root...
+Downloading file:packages/wifi-scripts_1.0-r1_all.ipk
+Installing wireless-regdb (2025.02.20-r1) to root...
+Downloading file:packages/wireless-regdb_2025.02.20-r1_all.ipk
+Installing kmod-cfg80211 (6.6.92.6.12.6-r2) to root...
+Downloading file:packages/kmod-cfg80211_6.6.92.6.12.6-r2_aarch64_cortex-a53.ipk
+Installing kmod-crypto-cmac (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-cmac_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-crypto-sha3 (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-sha3_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-crypto-rng (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-rng_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-crypto-geniv (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-geniv_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-crypto-seqiv (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-seqiv_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-crypto-ctr (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-ctr_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-crypto-ccm (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-ccm_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-crypto-gf128 (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-gf128_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-crypto-ghash (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-ghash_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-crypto-gcm (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-gcm_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing hostapd-common (2024.09.15~5ace39b0-r2) to root...
+Downloading file:packages/hostapd-common_2024.09.15~5ace39b0-r2_aarch64_cortex-a53.ipk
+Installing kmod-mac80211 (6.6.92.6.12.6-r2) to root...
+Downloading file:packages/kmod-mac80211_6.6.92.6.12.6-r2_aarch64_cortex-a53.ipk
+Installing kmod-mt76-core (6.6.92.2025.02.14~e5fef138-r1) to root...
+Downloading file:packages/kmod-mt76-core_6.6.92.2025.02.14~e5fef138-r1_aarch64_cortex-a53.ipk
+Installing kmod-mt76-connac (6.6.92.2025.02.14~e5fef138-r1) to root...
+Downloading file:packages/kmod-mt76-connac_6.6.92.2025.02.14~e5fef138-r1_aarch64_cortex-a53.ipk
+Installing kmod-hwmon-core (6.6.92-r1) to root...
+Downloading file:packages/kmod-hwmon-core_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-thermal (6.6.92-r1) to root...
+Downloading file:packages/kmod-thermal_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-mt7981-firmware (6.6.92.2025.02.14~e5fef138-r1) to root...
+Downloading file:packages/kmod-mt7981-firmware_6.6.92.2025.02.14~e5fef138-r1_aarch64_cortex-a53.ipk
+Installing kmod-phy-aquantia (6.6.92-r1) to root...
+Downloading file:packages/kmod-phy-aquantia_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-libphy (6.6.92-r1) to root...
+Downloading file:packages/kmod-libphy_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-lib-crc-ccitt (6.6.92-r1) to root...
+Downloading file:packages/kmod-lib-crc-ccitt_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-tcp-bbr (6.6.92-r1) to root...
+Downloading file:packages/kmod-tcp-bbr_6.6.92-r1_aarch64_cortex-a53.ipk
+Package libc (1.2.5-r4) installed in root is up to date.
+Package libgcc1 (13.3.0-r4) installed in root is up to date.
+Installing libustream-mbedtls20201210 (2024.07.28~99bd3d2b-r1) to root...
+Downloading file:packages/libustream-mbedtls20201210_2024.07.28~99bd3d2b-r1_aarch64_cortex-a53.ipk
+Installing libmbedtls21 (3.6.3-r1) to root...
+Downloading file:packages/libmbedtls21_3.6.3-r1_aarch64_cortex-a53.ipk
+Installing logd (2024.04.26~85f10530-r1) to root...
+Downloading file:packages/logd_2024.04.26~85f10530-r1_aarch64_cortex-a53.ipk
+Installing luci-app-advancedplus (1.8.4-r20) to root...
+Downloading file:packages/luci-app-advancedplus_1.8.4-r20_all.ipk
+Installing luci-app-fan (1.0.0-r3-r10) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/kiddin9/luci-app-fan_1.0.0-r3-r10_all.ipk
+Installing coreutils-stat (9.3-r1) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/coreutils-stat_9.3-r1_aarch64_cortex-a53.ipk
+Installing kmod-hwmon-pwmfan (6.6.92-r1) to root...
+Downloading file:packages/kmod-hwmon-pwmfan_6.6.92-r1_aarch64_cortex-a53.ipk
+Package luci-app-filemanager (26.150.60207~e459c57) installed in root is up to date.
+Package luci-app-firewall (26.150.60207~e459c57) installed in root is up to date.
+Installing luci-app-log-viewer (1.3.0-r11) to root...
+Downloading file:packages/luci-app-log-viewer_1.3.0-r11_all.ipk
+Package luci-app-package-manager (26.150.68089~d2b87f4) installed in root is up to date.
+Installing luci-app-syscontrol (26.150.68089~d2b87f4) to root...
+Downloading file:packages/luci-app-syscontrol_26.150.68089~d2b87f4_all.ipk
+Installing luci-app-upnp (26.155.56748~9d68ca7) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/kiddin9/luci-app-upnp_26.155.56748~9d68ca7_all.ipk
+Installing luci-app-wizard (26.150.68089~d2b87f4) to root...
+Downloading file:packages/luci-app-wizard_26.150.68089~d2b87f4_all.ipk
+Package luci-base (26.150.60207~e459c57) installed in root is up to date.
+Package luci-compat (26.150.60207~e459c57) installed in root is up to date.
+Installing luci-lib-fs (1.0-r3) to root...
+Downloading file:packages/luci-lib-fs_1.0-r3_all.ipk
+Package luci-lib-ipkg (26.150.60207~e459c57) installed in root is up to date.
+Installing luci-proto-wireguard (26.150.60207~e459c57) to root...
+Downloading file:packages/luci-proto-wireguard_26.150.60207~e459c57_all.ipk
+Installing kmod-crypto-lib-chacha20 (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-lib-chacha20_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-crypto-lib-poly1305 (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-lib-poly1305_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-crypto-lib-chacha20poly1305 (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-lib-chacha20poly1305_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-crypto-kpp (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-kpp_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-crypto-lib-curve25519 (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-lib-curve25519_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-udptunnel4 (6.6.92-r1) to root...
+Downloading file:packages/kmod-udptunnel4_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-udptunnel6 (6.6.92-r1) to root...
+Downloading file:packages/kmod-udptunnel6_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-wireguard (6.6.92-r1) to root...
+Downloading file:packages/kmod-wireguard_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing wireguard-tools (1.0.20210914-r4) to root...
+Downloading file:packages/wireguard-tools_1.0.20210914-r4_aarch64_cortex-a53.ipk
+Installing luci-lib-uqr (26.150.60207~e459c57) to root...
+Downloading file:packages/luci-lib-uqr_26.150.60207~e459c57_all.ipk
+Installing mt7981-wo-firmware (20241110-r2) to root...
+Downloading file:packages/mt7981-wo-firmware_20241110-r2_aarch64_cortex-a53.ipk
+Installing mtd (26) to root...
+Downloading file:packages/mtd_26_aarch64_cortex-a53.ipk
+Installing nano (8.4-r1) to root...
+Downloading file:packages/nano_8.4-r1_aarch64_cortex-a53.ipk
+Package netifd (2024.12.17~ea01ed41-r1) installed in root is up to date.
+Installing odhcp6c (2024.09.25~b6ae9ffa-r1) to root...
+Downloading file:packages/odhcp6c_2024.09.25~b6ae9ffa-r1_aarch64_cortex-a53.ipk
+Installing odhcpd-ipv6only (2024.05.08~a2988231-r1) to root...
+Downloading file:packages/odhcpd-ipv6only_2024.05.08~a2988231-r1_aarch64_cortex-a53.ipk
+Installing openssh-sftp-server (9.9_p2-r1) to root...
+Downloading file:packages/openssh-sftp-server_9.9_p2-r1_aarch64_cortex-a53.ipk
+Package opkg (2024.10.16~38eccbb1-r1) installed in root is up to date.
+Installing ppp (2.5.1-r1) to root...
+Downloading file:packages/ppp_2.5.1-r1_aarch64_cortex-a53.ipk
+Installing kmod-slhc (6.6.92-r1) to root...
+Downloading file:packages/kmod-slhc_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-ppp (6.6.92-r1) to root...
+Downloading file:packages/kmod-ppp_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-macvlan (6.6.92-r1) to root...
+Downloading file:packages/kmod-macvlan_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing shellsync (0.2-r2) to root...
+Downloading file:packages/shellsync_0.2-r2_aarch64_cortex-a53.ipk
+Installing kmod-crypto-user (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-user_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-crypto-arc4 (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-arc4_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-crypto-ecb (6.6.92-r1) to root...
+Downloading file:packages/kmod-crypto-ecb_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-mppe (6.6.92-r1) to root...
+Downloading file:packages/kmod-mppe_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing ppp-mod-pppoe (2.5.1-r1) to root...
+Downloading file:packages/ppp-mod-pppoe_2.5.1-r1_aarch64_cortex-a53.ipk
+Installing kmod-pppox (6.6.92-r1) to root...
+Downloading file:packages/kmod-pppox_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing kmod-pppoe (6.6.92-r1) to root...
+Downloading file:packages/kmod-pppoe_6.6.92-r1_aarch64_cortex-a53.ipk
+Package resolveip (2) installed in root is up to date.
+Installing swconfig (12) to root...
+Downloading file:packages/swconfig_12_aarch64_cortex-a53.ipk
+Installing uboot-envtools (2024.07-r1) to root...
+Downloading file:packages/uboot-envtools_2024.07-r1_aarch64_cortex-a53.ipk
+Package uci (2025.01.20~16ff0bad-r1) installed in root is up to date.
+Package uclient-fetch (2024.10.22~88ae8f20-r1) installed in root is up to date.
+Installing urandom-seed (3) to root...
+Downloading file:packages/urandom-seed_3_aarch64_cortex-a53.ipk
+Installing getrandom (2024.04.26~85f10530-r1) to root...
+Downloading file:packages/getrandom_2024.04.26~85f10530-r1_aarch64_cortex-a53.ipk
+Installing urngd (2023.11.01~44365eb1-r1) to root...
+Downloading file:packages/urngd_2023.11.01~44365eb1-r1_aarch64_cortex-a53.ipk
+Installing wget-ssl (1.24.5-r1) to root...
+Downloading file:packages/wget-ssl_1.24.5-r1_aarch64_cortex-a53.ipk
+Installing wpad-basic-mbedtls (2024.09.15~5ace39b0-r2) to root...
+Downloading file:packages/wpad-basic-mbedtls_2024.09.15~5ace39b0-r2_aarch64_cortex-a53.ipk
+Installing ucode-mod-uloop (2025.02.10~a8a11aea-r1) to root...
+Downloading file:packages/ucode-mod-uloop_2025.02.10~a8a11aea-r1_aarch64_cortex-a53.ipk
+Installing zram-swap (32) to root...
+Downloading file:packages/zram-swap_32_all.ipk
+Installing kmod-zram (6.6.92-r1) to root...
+Downloading file:packages/kmod-zram_6.6.92-r1_aarch64_cortex-a53.ipk
+Installing luci-i18n-filemanager-zh-cn (25.137.37373~691440a) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/luci/luci-i18n-filemanager-zh-cn_25.137.37373~691440a_all.ipk
+Installing luci-i18n-nlbwmon-zh-cn (25.137.37373~691440a) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/luci/luci-i18n-nlbwmon-zh-cn_25.137.37373~691440a_all.ipk
+Package luci-i18n-ttyd-zh-cn (25.137.37373~691440a) installed in root is up to date.
+Package luci-i18n-filemanager-zh-cn (25.137.37373~691440a) installed in root is up to date.
+Installing luci-i18n-firewall-zh-cn (25.137.37373~691440a) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/luci/luci-i18n-firewall-zh-cn_25.137.37373~691440a_all.ipk
+Installing luci-i18n-base-zh-cn (25.137.37373~691440a) to root...
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/luci/luci-i18n-base-zh-cn_25.137.37373~691440a_all.ipk
+Configuring kmod-nfnetlink.
+Configuring kmod-nf-reject.
+Configuring kmod-nf-reject6.
+Configuring kmod-nf-conntrack.
+Configuring kmod-nf-conntrack6.
+Configuring kmod-nf-nat.
+Configuring kmod-nf-log.
+Configuring kmod-nf-log6.
+Configuring kmod-crypto-hash.
+Configuring kmod-crypto-crc32c.
+Configuring kmod-lib-crc32c.
+Configuring kmod-nft-core.
+Configuring kmod-nf-tproxy.
+Configuring kmod-nft-tproxy.
+Configuring terminfo.
+Configuring kmod-crypto-lib-chacha20.
+Configuring kmod-crypto-lib-poly1305.
+Configuring kmod-crypto-lib-chacha20poly1305.
+Configuring kmod-crypto-kpp.
+Configuring kmod-crypto-lib-curve25519.
+Configuring kmod-udptunnel4.
+Configuring kmod-udptunnel6.
+Configuring kmod-wireguard.
+Configuring wireguard-tools.
+Configuring libjson-c5.
+Configuring libucode20230711.
+Configuring ucode.
+Configuring luci-lib-uqr.
+Configuring resolveip.
+Configuring luci-proto-wireguard.
+Configuring libubox20240329.
+Configuring libuci20250120.
+Configuring liblua5.1.5.
+Configuring libuci-lua.
+Configuring libpcre2.
+Configuring libcap.
+Configuring libpthread.
+Configuring librt.
+Configuring libuuid1.
+Configuring uwsgi.
+Configuring uwsgi-syslog-plugin.
+Configuring uwsgi-cgi-plugin.
+Configuring uwsgi-luci-support.
+Configuring libstdcpp6.
+Configuring libubus20250102.
+Configuring libopenssl3.
+Configuring nginx-ssl-util.
+Configuring zlib.
+Configuring libxml2.
+Configuring nginx-ssl.
+Configuring libblobmsg-json20240329.
+Configuring nginx-mod-ubus.
+Configuring nginx-mod-luci.
+Configuring libnl-tiny1.
+Configuring libiwinfo-data.
+Configuring libiwinfo20230701.
+Configuring iwinfo.
+Configuring openssh-sftp-server.
+Configuring watchcat.
+Configuring liblucihttp0.
+Configuring rpcd.
+Configuring rpcd-mod-file.
+Configuring rpcd-mod-luci.
+Configuring rpcd-mod-ucode.
+Configuring cgi-io.
+Configuring ucode-mod-fs.
+Configuring ucode-mod-uci.
+Configuring ucode-mod-ubus.
+Configuring ucode-mod-math.
+Configuring ucode-mod-html.
+Configuring liblucihttp-ucode.
+Configuring luci-base.
+Configuring luci-app-watchcat.
+Configuring lua.
+Configuring luci-lib-nixio.
+Configuring luci-lib-ip.
+Configuring luci-lib-jsonc.
+Configuring liblucihttp-lua.
+Configuring luci-lib-base.
+Configuring kmod-macvlan.
+Configuring libbz2-1.0.
+Configuring luci-lib-chartjs.
+Configuring kmod-nf-conntrack-netlink.
+Configuring nlbwmon.
+Configuring luci-app-nlbwmon.
+Configuring kmod-crypto-null.
+Configuring kmod-crypto-aead.
+Configuring kmod-crypto-manager.
+Configuring kmod-crypto-hmac.
+Configuring kmod-crypto-sha512.
+Configuring kmod-crypto-sha3.
+Configuring kmod-crypto-rng.
+Configuring kmod-crypto-user.
+Configuring luci-app-log-viewer.
+Configuring kmod-iptunnel6.
+Configuring kmod-ip6-tunnel.
+Configuring shadow-utils.
+Configuring shadow-common.
+Configuring shadow-useradd.
+Configuring libblkid1.
+Configuring libmount1.
+Configuring libsmartcols1.
+Configuring mount-utils.
+Configuring ubusd.
+Configuring ubus.
+Configuring ubox.
+Configuring block-mount.
+Configuring libncurses6.
+Configuring lsblk.
+Configuring libcomerr0.
+Configuring libss2.
+Configuring libext2fs2.
+Configuring libe2p2.
+Configuring e2fsprogs.
+Configuring libparted.
+Configuring libreadline8.
+Configuring parted.
+Configuring smartmontools.
+Configuring smartd.
+Configuring kmod-md-mod.
+Configuring kmod-md-raid0.
+Configuring kmod-md-raid10.
+Configuring kmod-md-raid1.
+Configuring mdadm.
+Configuring libelf1.
+Configuring libbpf1.
+Configuring libmnl0.
+Configuring ip-full.
+Configuring uci.
+Configuring bash.
+Configuring quickstart.
+Configuring kmod-crypto-gf128.
+Configuring libcap-ng.
+Configuring libnftnl11.
+Configuring miniupnpd-nftables.
+Configuring libuclient20201210.
+Configuring uclient-fetch.
+Configuring opkg.
+Configuring kmod-nf-ipt.
+Configuring kmod-nft-compat.
+Configuring libuv1.
+Configuring libwebsockets-full.
+Configuring hostapd-common.
+Configuring ucode-mod-nl80211.
+Configuring ucode-mod-rtnl.
+Configuring ucode-mod-uloop.
+Configuring libudebug.
+Configuring libmbedtls21.
+Configuring wpad-basic-mbedtls.
+Configuring iw.
+Configuring kmod-nft-nat.
+Configuring kmod-nft-fullcone.
+Configuring jsonfilter.
+Configuring busybox.
+Configuring kmod-crypto-geniv.
+Configuring kmod-crypto-seqiv.
+Configuring kmod-crypto-ctr.
+Configuring coremark.
+Configuring kmod-hwmon-core.
+Configuring kmod-thermal.
+Configuring kmod-hwmon-pwmfan.
+Configuring kmod-nft-fib.
+Configuring kmod-zram.
+Configuring zram-swap.
+Configuring libubus-lua.
+Configuring nano.
+Configuring kmod-tun.
+Configuring ucode-mod-lua.
+Configuring luci-lua-runtime.
+Configuring luci-app-wizard.
+Configuring swconfig.
+Configuring libattr.
+Configuring libacl.
+Configuring kmod-inet-diag.
+Configuring liblzma.
+Configuring kmod-crypto-md5.
+Configuring luci-mod-system.
+Configuring kmod-nf-flow.
+Configuring kmod-lib-crc-ccitt.
+Configuring getrandom.
+Configuring libxtables12.
+Configuring libiptext0.
+Configuring kmod-libphy.
+Configuring kmod-phy-aquantia.
+Configuring luci-lib-xterm.
+Configuring luci-theme-bootstrap.
+Configuring kmod-slhc.
+Configuring kmod-ppp.
+Configuring kmod-pppox.
+Configuring kmod-pppoe.
+Configuring coreutils.
+Configuring coreutils-stat.
+Configuring luci-app-fan.
+Configuring shellsync.
+Configuring jshn.
+Configuring netifd.
+Configuring ubi-utils.
+Configuring fstools.
+Configuring fwtool.
+Configuring libjson-script20240329.
+Configuring procd.
+Configuring procd-seccomp.
+Configuring base-files.
+Configuring rpcd-mod-iwinfo.
+Configuring luci-mod-status.
+Configuring luci-mod-network.
+Configuring luci-mod-admin-full.
+Configuring kmod-nft-offload.
+Configuring jansson4.
+Configuring nftables-json.
+Configuring kmod-ipt-core.
+Configuring libiptext6-0.
+Configuring libiptext-nft0.
+Configuring xtables-nft.
+Configuring iptables-nft.
+Configuring kmod-nf-ipt6.
+Configuring kmod-ip6tables.
+Configuring libip4tc2.
+Configuring libip6tc2.
+Configuring xtables-legacy.
+Configuring ip6tables-zz-legacy.
+Configuring kmod-nf-socket.
+Configuring kmod-nft-socket.
+Configuring firewall4.
+Configuring luci-app-firewall.
+Configuring luci-app-package-manager.
+Configuring luci-proto-ppp.
+Configuring luci-proto-ipv6.
+Configuring rpcd-mod-rrdns.
+Configuring luci-nginx.
+Configuring luci-compat.
+Configuring libnghttp2-14.
+Configuring ca-bundle.
+Configuring libcurl4.
+Configuring curl.
+Configuring luci-app-advancedplus.
+Configuring ttyd.
+Configuring luci-app-ttyd.
+Configuring libustream-mbedtls20201210.
+Configuring fitblk.
+Configuring bzip2.
+Configuring uboot-envtools.
+Configuring kmod-crypto-sha256.
+Configuring autocore.
+Configuring libnfnetlink0.
+Configuring libnetfilter-conntrack3.
+Configuring luci-app-syscontrol.
+Configuring libgmp10.
+Configuring libruby3.3.
+Configuring ruby.
+Configuring ruby-digest.
+Configuring ruby-enc.
+Configuring ruby-pstore.
+Configuring kmod-crypto-acompress.
+Configuring xz-utils.
+Configuring xz.
+Configuring tar.
+Configuring wifi-scripts.
+Configuring wireless-regdb.
+Configuring kmod-cfg80211.
+Configuring kmod-crypto-cmac.
+Configuring kmod-crypto-ccm.
+Configuring kmod-crypto-ghash.
+Configuring kmod-crypto-gcm.
+Configuring kmod-mac80211.
+Configuring kmod-mt76-core.
+Configuring kmod-mt76-connac.
+Configuring ruby-stringio.
+Configuring ruby-bigdecimal.
+Configuring ruby-date.
+Configuring libyaml.
+Configuring ruby-psych.
+Configuring ruby-yaml.
+Configuring luci-app-filemanager.
+Configuring libnettle8.
+Configuring kmod-ipt-ipset.
+Configuring dnsmasq-full.
+Configuring unzip.
+Configuring luci-app-openclash.
+Configuring luci-lib-ipkg.
+Configuring odhcp6c.
+Configuring dropbear.
+Configuring luci-theme-argon.
+Configuring mtd.
+Configuring odhcpd-ipv6only.
+Configuring eip197-mini-firmware.
+Configuring kmod-crypto-authenc.
+Configuring kmod-crypto-des.
+Configuring kmod-crypto-sha1.
+Configuring kmod-crypto-hw-safexcel.
+Configuring kmod-mt7915e.
+Configuring script-utils.
+Configuring coreutils-stty.
+Configuring taskd.
+Configuring luci-lib-taskd.
+Configuring urandom-seed.
+Configuring luci-app-taskplan.
+Configuring kmod-crypto-arc4.
+Configuring kmod-crypto-ecb.
+Configuring kmod-mppe.
+Configuring ppp.
+Configuring luci-i18n-ttyd-zh-cn.
+Configuring luci-app-quickstart.
+Configuring kmod-leds-gpio.
+Configuring kmod-gpio-button-hotplug.
+Configuring logd.
+Configuring luci-app-store.
+Configuring wrtbwmon.
+Configuring luci-app-wrtbwmon.
+Configuring ds-lite.
+Configuring kmod-lib-xxhash.
+Configuring kmod-lib-zstd.
+Configuring ddns-go.
+Configuring luci-app-ddns-go.
+Configuring luci-app-istorex.
+Configuring luci-app-upnp.
+Configuring mt7981-wo-firmware.
+Configuring htop.
+Configuring kmod-tcp-bbr.
+Configuring luci-i18n-base-zh-cn.
+Configuring luci-i18n-filemanager-zh-cn.
+Configuring kmod-mt7981-firmware.
+Configuring wget-ssl.
+Configuring luci-app-ap-modem.
+Configuring urngd.
+Configuring luci-i18n-firewall-zh-cn.
+Configuring ppp-mod-pppoe.
+Configuring luci-i18n-nlbwmon-zh-cn.
+Configuring luci-lib-fs.
+No packages removed.
+Installing my-default-settings (2-r26) to root...
+Downloading file:packages/my-default-settings_2-r26_all.ipk
+Configuring my-default-settings.
+
+Finalizing root filesystem...
+Enabling advancedplus
+Enabling ap_modem
+Enabling boot
+Enabling bootcount
+Enabling cron
+Enabling ddns-go
+Enabling dnsmasq
+Enabling done
+Enabling dropbear
+Enabling firewall
+Enabling fstab
+Enabling gpio_switch
+Enabling istore
+Enabling led
+Enabling log
+Enabling luci-fan
+Enabling mdadm
+Enabling miniupnpd
+Enabling network
+Enabling nginx
+Enabling nlbwmon
+Enabling odhcpd
+Enabling openclash
+Enabling packet_steering
+Enabling quickstart
+Enabling ram_release
+Enabling rpcd
+Enabling smartd
+Enabling startdhns
+Enabling sysctl
+Enabling sysfixtime
+Enabling sysntpd
+Enabling system
+Enabling taskplan
+Enabling tasks
+Enabling ttyd
+Enabling ubihealthd
+Enabling ucitrack
+Enabling umount
+Enabling urandom_seed
+Enabling urngd
+Enabling uwsgi
+Enabling watchcat
+Enabling wizard
+Enabling wpad
+Enabling wrtbwmon
+Enabling zram
+
+Building images...
+Parallel mksquashfs: Using 24 processors
+Creating 4.0 filesystem on /data/cache/mem/disk1/cache/mediatek/filogic/build_dir/target-aarch64_cortex-a53_musl/linux-mediatek_filogic/root.squashfs, block size 262144.
+
+[| ] 0/3286 0%
+[=============================================================\] 3286/3286 100%
+
+Exportable Squashfs 4.0 filesystem, xz compressed, data block size 262144
+compressed data, compressed metadata, compressed fragments,
+no xattrs, compressed ids
+duplicates are removed
+Filesystem size 31791.15 Kbytes (31.05 Mbytes)
+24.38% of uncompressed filesystem size (130378.33 Kbytes)
+Inode table size 24954 bytes (24.37 Kbytes)
+21.13% of uncompressed inode table size (118079 bytes)
+Directory table size 35496 bytes (34.66 Kbytes)
+43.57% of uncompressed directory table size (81460 bytes)
+Number of duplicate files found 394
+Number of inodes 3552
+Number of files 2937
+Number of fragments 142
+Number of symbolic links 341
+Number of device nodes 1
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 273
+Number of hard-links 0
+Number of ids (unique uids + gids) 1
+Number of uids 1
+root (0)
+Number of gids 1
+root (0)
+sysupgrade-xiaomi_mi-router-ax3000t/
+sysupgrade-xiaomi_mi-router-ax3000t/CONTROL
+sysupgrade-xiaomi_mi-router-ax3000t/kernel
+sysupgrade-xiaomi_mi-router-ax3000t/root
+[kernel]
+mode=ubi
+vol_id=0
+vol_type=dynamic
+vol_name=kernel
+image=/data/cache/mem/disk1/cache/mediatek/filogic/build_dir/target-aarch64_cortex-a53_musl/linux-mediatek_filogic/tmp/kwrt-06.13.2025-mediatek-filogic-xiaomi_mi-router-ax3000t-initramfs-factory.ubi.tmp
+ubinize: volume size was not specified in section "kernel", assume minimum to fit image "/data/cache/mem/disk1/cache/mediatek/filogic/build_dir/target-aarch64_cortex-a53_musl/linux-mediatek_filogic/tmp/kwrt-06.13.2025-mediatek-filogic-xiaomi_mi-router-ax3000t-initramfs-factory.ubi.tmp"22617888 bytes (21.5 MiB)
+
+Calculating checksums...
+错误日志:
+
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/targets/mediatek/filogic/6.6.92/Packages
+Updated list of available packages in /data/cache/mem/disk1/cache/mediatek/filogic/build_dir/target-aarch64_cortex-a53_musl/root-mediatek/../../../../../../../../../../data/cache/mem/disk1/cache/mediatek/filogic/dl/kwrt_core
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/base/Packages
+Updated list of available packages in /data/cache/mem/disk1/cache/mediatek/filogic/build_dir/target-aarch64_cortex-a53_musl/root-mediatek/../../../../../../../../../../data/cache/mem/disk1/cache/mediatek/filogic/dl/kwrt_base
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/packages/Packages
+Updated list of available packages in /data/cache/mem/disk1/cache/mediatek/filogic/build_dir/target-aarch64_cortex-a53_musl/root-mediatek/../../../../../../../../../../data/cache/mem/disk1/cache/mediatek/filogic/dl/kwrt_packages
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/luci/Packages
+Updated list of available packages in /data/cache/mem/disk1/cache/mediatek/filogic/build_dir/target-aarch64_cortex-a53_musl/root-mediatek/../../../../../../../../../../data/cache/mem/disk1/cache/mediatek/filogic/dl/kwrt_luci
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/routing/Packages
+Updated list of available packages in /data/cache/mem/disk1/cache/mediatek/filogic/build_dir/target-aarch64_cortex-a53_musl/root-mediatek/../../../../../../../../../../data/cache/mem/disk1/cache/mediatek/filogic/dl/kwrt_routing
+Downloading file://www/wwwroot/dl.openwrt.ai/releases/24.10/packages/aarch64_cortex-a53/kiddin9/Packages
+Updated list of available packages in /data/cache/mem/disk1/cache/mediatek/filogic/build_dir/target-aarch64_cortex-a53_musl/root-mediatek/../../../../../../../../../../data/cache/mem/disk1/cache/mediatek/filogic/dl/kwrt_kiddin9
+Downloading file:packages/Packages
+Updated list of available packages in /data/cache/mem/disk1/cache/mediatek/filogic/build_dir/target-aarch64_cortex-a53_musl/root-mediatek/../../../../../../../../../../data/cache/mem/disk1/cache/mediatek/filogic/dl/imagebuilder
+grep: /etc/nginx/module.d: No such file or directory
+/data/cache/mem/disk1/cache/mediatek/filogic/build_dir/target-aarch64_cortex-a53_musl/root-mediatek/etc/init.d/openclash: line 3: /usr/share/ucitrack/luci-app-add.json: No such file or directory
+./etc/init.d/openclash: line 3: /usr/share/ucitrack/luci-app-add.json: No such file or directory
+Pseudo file "dev" exists in source filesystem "/data/cache/mem/disk1/cache/mediatek/filogic/build_dir/target-aarch64_cortex-a53_musl/root-mediatek/dev".
+Ignoring, exclude it (-e/-ef) to override.
+31791+1 records in
+31792+0 records out
+32555008 bytes (33 MB, 31 MiB) copied, 0.0743213 s, 438 MB/s
+/data/cache/mem/disk1/cache/mediatek/filogic/staging_dir/host/bin/tar: Option --mtime: Treating date '@1748632619' as 2025-05-31 03:16:59
+44175+1 records in
+44175+1 records out
+22617888 bytes (23 MB, 22 MiB) copied, 0.0948447 s, 238 MB/s
