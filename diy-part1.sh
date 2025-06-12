@@ -15,9 +15,13 @@ rm -rf feeds/packages/net/msd_lite
 rm -rf feeds/packages/net/smartdns
 rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf feeds/luci/themes/luci-theme-netgear
-rm -rf feeds/NueXini_Packages/luci-app-mosdns
-rm -rf feeds/NueXini_Packages/luci-app-netdata
-rm -rf feeds/NueXini_Packages/luci-app-serverchan
+rm -rf feeds/packages/luci-app-mosdns
+rm -rf feeds/packages/luci-app-netdata
+rm -rf feeds/packages/luci-app-serverchan
+
+# rm -rf feeds/NueXini_Packages/luci-app-mosdns
+# rm -rf feeds/NueXini_Packages/luci-app-netdata
+# rm -rf feeds/NueXini_Packages/luci-app-serverchan
 # DIY Network Tools
 rm -rf feeds/NueXini_Packages/luci-app-ssr-plus
 # Git稀疏克隆，只克隆指定目录到本地
@@ -69,9 +73,8 @@ sed -i "s/luci-app-vlmcsd//g" include/target.mk
 # ./scripts/feeds install -a -f -p helloworld
 
 ./scripts/feeds clean
-./scripts/feeds update -a
-./scripts/feeds install -a
 # 移除失效的包
+rm -rf feeds/small/luci-app-ssr-plus
 # rm -rf feeds/NueXini_Packages/luci-app-3proxy
 # rm -rf feeds/NueXini_Packages/luci-app-atinout  
 # rm -rf feeds/NueXini_Packages/luci-app-cellled
@@ -82,6 +85,9 @@ sed -i "s/luci-app-vlmcsd//g" include/target.mk
 # rm -rf feeds/NueXini_Packages/luci-app-telegrambot
 # rm -rf feeds/NueXini_Packages/luci-proto-tun2socks
 # rm -rf feeds/NueXini_Packages/luci-proto-xmm
+
+./scripts/feeds update -a
+./scripts/feeds install -a
 
 
 # 
