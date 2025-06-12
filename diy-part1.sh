@@ -9,6 +9,7 @@
 # File name: diy-part1.sh
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
+
 # 移除要替换的包
 rm -rf feeds/packages/net/mosdns
 rm -rf feeds/packages/net/msd_lite
@@ -19,12 +20,10 @@ rm -rf feeds/packages/luci-app-mosdns
 rm -rf feeds/packages/luci-app-netdata
 rm -rf feeds/packages/luci-app-serverchan
 
-# rm -rf feeds/NueXini_Packages/luci-app-mosdns
-# rm -rf feeds/NueXini_Packages/luci-app-netdata
-# rm -rf feeds/NueXini_Packages/luci-app-serverchan
-# DIY Network Tools
-rm -rf feeds/NueXini_Packages/luci-app-ssr-plus
-# Git稀疏克隆，只克隆指定目录到本地
+# DIY Network Tools - 移除有问题的 ssr-plus 包
+rm -rf feeds/small/luci-app-ssr-plus
+
+# Git稀疏克隆,只克隆指定目录到本地
 function git_sparse_clone() {
   branch="$1" repourl="$2" && shift 2
   git clone --depth=1 -b $branch --single-branch --filter=blob:none --sparse $repourl
@@ -38,14 +37,13 @@ function git_sparse_clone() {
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
-# sed -i '$a src-git NueXini_Packages https://github.com/NueXini/NueXini_Packages.git' feeds.conf.default
 
 # 添加额外插件
 git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 #Add a Openclash feed source
-# git clone --depth=1 https://github.com/vernesong/OpenClash.git package/luci-app-openclash
-# Add a passwall feed source
+git clone --depth=1 https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+# Add a passwall feed source (作为 ssr-plus 的替代)
 echo 'src-git passwall_luci https://github.com/xiaorouji/openwrt-passwall.git' >>feeds.conf.default
 echo 'src-git passwall_package https://github.com/xiaorouji/openwrt-passwall-packages' >>feeds.conf.default
 
@@ -69,12 +67,22 @@ sed -i "s/${orig_version}/R${date_version} by espu/g" package/lean/default-setti
 # 移除默认安装的vsftpd、vlmcsd
 sed -i "s/luci-app-vsftpd//g" include/target.mk
 sed -i "s/luci-app-vlmcsd//g" include/target.mk
-# ./scripts/feeds update helloworld
-# ./scripts/feeds install -a -f -p helloworld
 
+# 清理 feeds 缓存
 ./scripts/feeds clean
-# 移除失效的包
+
+# 彻底移除有问题的包和相关依赖
 rm -rf feeds/small/luci-app-ssr-plus
+rm -rf feeds/small/dns2socks-rust 2>/dev/null || true
+rm -rf package/feeds/small/luci-app-ssr-plus 2>/dev/null || true
+
+# 移除可能导致递归依赖的包
+rm -rf feeds/*/nikki 2>/dev/null || true
+rm -rf feeds/*/geoview 2>/dev/null || true
+rm -rf package/feeds/*/nikki 2>/dev/null || true
+rm -rf package/feeds/*/geoview 2>/dev/null || true
+
+echo "已移除有问题的包，建议使用 passwall 作为替代方案"
 # rm -rf feeds/NueXini_Packages/luci-app-3proxy
 # rm -rf feeds/NueXini_Packages/luci-app-atinout  
 # rm -rf feeds/NueXini_Packages/luci-app-cellled
