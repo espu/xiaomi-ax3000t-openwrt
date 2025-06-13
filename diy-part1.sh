@@ -37,8 +37,8 @@ function git_sparse_clone() {
 
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
-sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
-sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
+# sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+# sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
 # sed -i '$a src-git NueXini_Packages https://github.com/NueXini/NueXini_Packages.git' feeds.conf.default
 
 # 添加额外插件
@@ -75,9 +75,12 @@ sed -i "s/luci-app-vlmcsd//g" include/target.mk
 
 ./scripts/feeds clean
 # 移除失效的包
+./scripts/feeds update -a
 rm -rf feeds/small/luci-app-ssr-plus
+rm -rf feeds/small/shadowsocksr-libev
+rm -rf feeds/small/trojan-plus
 rm -rf feeds/packages/luci-app-ssr-plus
-rm -rf feeds/small/dns2socks-rust
+# rm -rf feeds/small/dns2socks-rust
 # rm -rf feeds/NueXini_Packages/luci-app-3proxy
 # rm -rf feeds/NueXini_Packages/luci-app-atinout  
 # rm -rf feeds/NueXini_Packages/luci-app-cellled
@@ -88,8 +91,6 @@ rm -rf feeds/small/dns2socks-rust
 # rm -rf feeds/NueXini_Packages/luci-app-telegrambot
 # rm -rf feeds/NueXini_Packages/luci-proto-tun2socks
 # rm -rf feeds/NueXini_Packages/luci-proto-xmm
-
-./scripts/feeds update -a
 ./scripts/feeds install -a
 # 
 # ./scripts/feeds update -a
