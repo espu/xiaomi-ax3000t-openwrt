@@ -76,11 +76,11 @@ sed -i "s/luci-app-vlmcsd//g" include/target.mk
 ./scripts/feeds clean
 # 移除失效的包
 ./scripts/feeds update -a
+
 rm -rf feeds/small/luci-app-ssr-plus
 rm -rf feeds/small/shadowsocksr-libev
 rm -rf feeds/small/trojan-plus
 rm -rf feeds/packages/luci-app-ssr-plus
-# rm -rf feeds/small/dns2socks-rust
 # rm -rf feeds/NueXini_Packages/luci-app-3proxy
 # rm -rf feeds/NueXini_Packages/luci-app-atinout  
 # rm -rf feeds/NueXini_Packages/luci-app-cellled
