@@ -257,26 +257,32 @@ jobs:
     # echo "安装ddns-go..."
     # git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/ddns-go &
     # DDNS_PID=$!
-                  
-    - name: Install additional packages
+  
+    - name: Install argon
       run: |
-        echo "🔌 安装额外软件包..."
-        cd openwrt
+        cd openwrt/package/lean
+        rm -rf luci-theme-argon
+        git clone -b master https://github.com/jerrykuku/luci-theme-argon.git luci-theme-argon
 
-        # 并行安装多个包
-        {
+    # - name: Install additional packages
+    #   run: |
+    #     echo "🔌 安装额外软件包..."
+    #     cd openwrt
 
-          echo "安装argon主题..."
-          cd package/lean
-          rm -rf luci-theme-argon
-          git clone -b master https://github.com/jerrykuku/luci-theme-argon.git luci-theme-argon &
-          ARGON_PID=$!
+    #     # 并行安装多个包
+    #     {
+
+    #       echo "安装argon主题..."
+    #       cd package/lean
+    #       rm -rf luci-theme-argon
+    #       git clone -b master https://github.com/jerrykuku/luci-theme-argon.git luci-theme-argon &
+    #       ARGON_PID=$!
           
-          # 等待所有后台任务完成
-          wait $DDNS_PID
-          wait $ARGON_PID
-          cd ../..
-        }
+    #       # 等待所有后台任务完成
+    #       wait $DDNS_PID
+    #       wait $ARGON_PID
+    #       cd ../..
+    #     }
 
     - name: Load custom configuration
       run: |
