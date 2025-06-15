@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright (c) 2019- P3TERX <https://p3terx.com>
+# Copyright (c) 2025- P3TERX <https://es.ip-ddns.com>
 #
 # This is free software, licensed under the MIT License.
 # See /LICENSE for more information.
@@ -15,9 +15,9 @@ rm -rf feeds/packages/net/msd_lite
 rm -rf feeds/packages/net/smartdns
 rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf feeds/luci/themes/luci-theme-netgear
-rm -rf feeds/packages/luci-app-mosdns
-rm -rf feeds/packages/luci-app-netdata
-rm -rf feeds/packages/luci-app-serverchan
+rm -rf feeds/luci/applications/luci-app-mosdns
+rm -rf feeds/luci/applications/luci-app-netdata
+rm -rf feeds/luci/applications/luci-app-serverchan
 rm -rf feeds/packages/luci-app-ssr-plus
 rm -rf feeds/small/luci-app-ssr-plus
 # rm -rf feeds/NueXini_Packages/luci-app-mosdns
@@ -42,8 +42,9 @@ function git_sparse_clone() {
 # sed -i '$a src-git NueXini_Packages https://github.com/NueXini/NueXini_Packages.git' feeds.conf.default
 
 # 添加额外插件
-git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
+git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
+git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/luci-app-netdata
 #Add a Openclash feed source
 # git clone --depth=1 https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 # Add a passwall feed source
@@ -53,9 +54,6 @@ echo 'src-git passwall_package https://github.com/xiaorouji/openwrt-passwall-pac
 # iStore
 git_sparse_clone main https://github.com/linkease/istore-ui app-store-ui
 git_sparse_clone main https://github.com/linkease/istore luci
-
-
-
 # 在线用户 luci-app-onliner @nlbwmon
 git_sparse_clone main https://github.com/haiibo/packages luci-app-onliner
 sed -i '$i uci set nlbwmon.@nlbwmon[0].refresh_interval=2s' package/lean/default-settings/files/zzz-default-settings
@@ -76,11 +74,12 @@ sed -i "s/luci-app-vlmcsd//g" include/target.mk
 ./scripts/feeds clean
 # 移除失效的包
 ./scripts/feeds update -a
-
-rm -rf feeds/small/luci-app-ssr-plus
-rm -rf feeds/small/shadowsocksr-libev
 rm -rf feeds/small/trojan-plus
+rm -rf feeds/small/luci-app-ssr-plus
 rm -rf feeds/packages/luci-app-ssr-plus
+#
+./scripts/feeds install -a
+# 
 # rm -rf feeds/NueXini_Packages/luci-app-3proxy
 # rm -rf feeds/NueXini_Packages/luci-app-atinout  
 # rm -rf feeds/NueXini_Packages/luci-app-cellled
@@ -91,36 +90,3 @@ rm -rf feeds/packages/luci-app-ssr-plus
 # rm -rf feeds/NueXini_Packages/luci-app-telegrambot
 # rm -rf feeds/NueXini_Packages/luci-proto-tun2socks
 # rm -rf feeds/NueXini_Packages/luci-proto-xmm
-./scripts/feeds install -a
-# 
-# ./scripts/feeds update -a
-
-# Description: OpenWrt DIY script part 2 (After Update feeds)
-#
-# Modify default IP
-# sed -i 's/192.168.1.1/192.168.11.1/g' package/base-files/luci2/bin/config_generate
-
-#./scripts/feeds install -a
-
-# Create Menu配置菜单 验证环境正常
-# make menuconfig
-
-# ### 下载DL库，编译
-
-# make download -j8
-# make V=s -j1
-
-# 制作 Menu
-
-# ### 7再次编译
-
-# make download -j8
-# make V=s -j1
-
-# ### 注:如需重新配置
-
-# bash
-
-# rm -rf .config
-# make menuconfig
-# make V=s -j$(nproc)
