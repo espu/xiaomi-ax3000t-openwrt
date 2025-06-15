@@ -3,7 +3,7 @@
 # 基于原版本增加了编译效率优化
 #
 
-name:(Claude Opt) Build OpenWrt 
+name: (Claude Opt) Build OpenWrt
 
 on:
   repository_dispatch:
