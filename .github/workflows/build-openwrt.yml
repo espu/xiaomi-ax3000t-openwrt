@@ -34,7 +34,7 @@ env:
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: true
   CACHE_TOOLCHAIN: true
-  TZ: Asia/Shanghai
+  TZ: Asia/Singapore
 
 jobs:
   build:
