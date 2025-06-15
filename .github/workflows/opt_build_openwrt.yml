@@ -122,19 +122,30 @@ jobs:
         echo "⚡ 配置编译优化..."
         
         # 配置ccache
-        if [ "$ENABLE_CCACHE" = "true" ]; then
-          mkdir -p ~/.ccache
-          echo "max_size = $CCACHE_SIZE" > ~/.ccache/ccache.conf
-          echo "compression = true" >> ~/.ccache/ccache.conf
-          echo "compress_level = 6" >> ~/.ccache/ccache.conf
-          echo "hash_dir = false" >> ~/.ccache/ccache.conf
-          export PATH="/usr/lib/ccache:$PATH"
-          export CCACHE_DIR="$HOME/.ccache"
-          ccache -M $CCACHE_SIZE
-          ccache -s
-          echo "CCACHE_DIR=$HOME/.ccache" >> $GITHUB_ENV
-          echo "PATH=/usr/lib/ccache:$PATH" >> $GITHUB_ENV
-        fi
+         if [ "$ENABLE_CCACHE" = "true" ]; then
+           export CCACHE_DIR="$HOME/.ccache"
+           mkdir -p "$CCACHE_DIR"
+           echo "max_size = $CCACHE_SIZE" > "$CCACHE_DIR/ccache.conf"
+           echo "compression = true" >> "$CCACHE_DIR/ccache.conf"
+           echo "compress_level = 6" >> "$CCACHE_DIR/ccache.conf"
+           echo "hash_dir = false" >> "$CCACHE_DIR/ccache.conf"
+           export PATH="/usr/lib/ccache:$PATH"
+           ccache -M $CCACHE_SIZE
+           ccache -s
+           echo "CCACHE_DIR=$CCACHE_DIR" >> $GITHUB_ENV
+           echo "PATH=/usr/lib/ccache:$PATH" >> $GITHUB_ENV
+           
+           # 🆕 新增：同步到 OpenWrt 配置
+           if [ -f "openwrt/.config" ]; then
+             echo "🔄 同步 CCACHE 配置..."
+             cd openwrt
+             sed -i "s|CONFIG_CCACHE_DIR=.*|CONFIG_CCACHE_DIR=\"$CCACHE_DIR\"|" .config
+             # 如果没有找到该行，则添加
+             grep -q "CONFIG_CCACHE_DIR" .config || echo "CONFIG_CCACHE_DIR=\"$CCACHE_DIR\"" >> .config
+             echo "✅ CCACHE 路径已同步: $CCACHE_DIR"
+             cd ..
+           fi
+         fi
         
         # 配置tmpfs加速编译
         if [ "$ENABLE_TMPFS" = "true" ]; then
