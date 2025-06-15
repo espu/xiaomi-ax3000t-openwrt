@@ -43,7 +43,7 @@ env:
   ENABLE_TMPFS: true
   TMPFS_SIZE: 8G
   PARALLEL_JOBS: auto
-  USE_CHINA_MIRROR: true
+  USE_CHINA_MIRROR: false
   TZ: Asia/Shanghai
 
 jobs:
