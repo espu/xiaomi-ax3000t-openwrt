@@ -44,7 +44,7 @@ env:
   TMPFS_SIZE: 8G
   PARALLEL_JOBS: auto
   USE_CHINA_MIRROR: false
-  TZ: Asia/Shanghai
+  TZ: Asia/Singapore
 
 jobs:
   build:
