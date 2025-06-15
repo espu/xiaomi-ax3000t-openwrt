@@ -113,9 +113,9 @@ jobs:
     - name: Combine Disks
       uses: easimon/maximize-build-space@master
       with:
-        swap-size-mb: 2048
-        temp-reserve-mb: 1024
-        root-reserve-mb: 2048
+        swap-size-mb: 1024
+        temp-reserve-mb: 100
+        root-reserve-mb: 1024
 
     - name: Setup Compilation Optimization
       run: |
@@ -311,51 +311,13 @@ jobs:
     - name: Compile the firmware
       id: compile
       run: |
-        echo "🔨 开始编译固件..."
         cd openwrt
-        
-        # 显示编译环境信息
-        echo "编译线程数: $MAKE_JOBS"
-        echo "ccache状态:"
-        ccache -s 2>/dev/null || echo "ccache未启用"
-        echo "可用内存:"
-        free -h
-        echo "磁盘空间:"
-        df -h
-        
-        echo "开始编译 ($(date))..."
-        
-        # 智能编译策略
-        {
-          # 首先尝试多线程编译
-          echo "尝试 $MAKE_JOBS 线程编译..."
-          if make -j$MAKE_JOBS V=w; then
-            echo "多线程编译成功"
-          else
-            echo "多线程编译失败，尝试单线程编译..."
-            if make -j1 V=s; then
-              echo "单线程编译成功"
-            else
-              echo "编译失败，查看错误信息..."
-              make -j1 V=s
-              exit 1
-            fi
-          fi
-        }
-        
-        echo "编译完成 ($(date))"
+        echo -e "$(nproc) thread compile"
+        make -j$(nproc) || make -j1 || make -j1 V=s
         echo "status=success" >> $GITHUB_OUTPUT
-        
-        # 最终ccache统计
-        if [ "$ENABLE_CCACHE" = "true" ]; then
-          echo "最终ccache统计:"
-          ccache -s
-        fi
-        
         grep '^CONFIG_TARGET.*DEVICE.*=y' .config | sed -r 's/.*DEVICE_(.*)=y/\1/' > DEVICE_NAME
         [ -s DEVICE_NAME ] && echo "DEVICE_NAME=_$(cat DEVICE_NAME)" >> $GITHUB_ENV
         echo "FILE_DATE=_$(date +"%Y%m%d%H%M")" >> $GITHUB_ENV
-
     - name: Check space usage
       if: (!cancelled())
       run: |
