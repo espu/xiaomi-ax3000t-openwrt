@@ -249,15 +249,15 @@ jobs:
         artifacts: ${{ env.FIRMWARE }}/*
         body: |
           **This is OpenWrt Firmware for XiaoMi AX3000T**
-          ### 📒 固件信息:
-          - 💻 平臺架構: mediatek-filogic
-          - ⚽ 固件源碼: ${{ env.REPO_URL }}
-          - 💝 源碼分支: ${{ env.REPO_BRANCH }}
-          - 🚀 内核版本: ${{ env.KERNEL }}
-          - 🌐 默認地址: 192.168.11.1
-          - 🔑 默認密碼: password
+          ### 📒 固件信息
+          - 💻 平台架构: mediatek-filogic
+          - ⚽ 固件源码: ${{ env.REPO_URL }}
+          - 💝 Branch源码分支: ${{ env.REPO_BRANCH }}
+          - 🚀 Kernel内核版本: ${{ env.KERNEL }}
+          - 🌐 Default默认地址: 192.168.11.1
+          - 🔑 Default默认密码: password
           ### 🧊 固件版本
-          - 固件編譯前最後一次➦[主要源碼](${{ env.REPO_URL }})更新记录
+          - 固件编译前最后一次➦[主源码](${{ env.REPO_URL }})更新记录
           - ${{ env.COMMIT_AUTHOR }}
           - ${{ env.COMMIT_DATE }}
           - ${{ env.COMMIT_MESSAGE }}
