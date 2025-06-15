@@ -217,15 +217,15 @@ jobs:
         mixkey: ${{ env.SOURCE_REPO }}-${{ env.REPO_BRANCH }}-${{ env.DEVICE_TARGET }}-${{ env.DEVICE_SUBTARGET }}
         prefix: ${{ env.OPENWRT_PATH }}
 
-    - name: Cache ccache
-      if: env.ENABLE_CCACHE == 'true'
-      uses: actions/cache@v3
-      with:
-        path: ~/.ccache
-        key: ccache-${{ env.SOURCE_REPO }}-${{ env.DEVICE_TARGET }}-${{ github.sha }}
-        restore-keys: |
-          ccache-${{ env.SOURCE_REPO }}-${{ env.DEVICE_TARGET }}-
-          ccache-${{ env.SOURCE_REPO }}-
+    # - name: Cache ccache
+    #   if: env.ENABLE_CCACHE == 'true'
+    #   uses: actions/cache@v3
+    #   with:
+    #     path: ~/.ccache
+    #     key: ccache-${{ env.SOURCE_REPO }}-${{ env.DEVICE_TARGET }}-${{ github.sha }}
+    #     restore-keys: |
+    #       ccache-${{ env.SOURCE_REPO }}-${{ env.DEVICE_TARGET }}-
+    #       ccache-${{ env.SOURCE_REPO }}-
       
     - name: Load custom feeds
       run: |
@@ -254,18 +254,18 @@ jobs:
       run: |
         echo "📦 安装feeds..."
         cd openwrt && ./scripts/feeds install -a
-
+    # echo "安装ddns-go..."
+    # git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/ddns-go &
+    # DDNS_PID=$!
+                  
     - name: Install additional packages
       run: |
         echo "🔌 安装额外软件包..."
         cd openwrt
-        
+
         # 并行安装多个包
         {
-          echo "安装ddns-go..."
-          git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/ddns-go &
-          DDNS_PID=$!
-          
+
           echo "安装argon主题..."
           cd package/lean
           rm -rf luci-theme-argon
@@ -293,19 +293,13 @@ jobs:
       env:
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-
+# time make download -j16 V=s
     - name: Download package
       id: package
       run: |
-        echo "⬇️ 下载软件包..."
         cd openwrt
         make defconfig
-        
-        # 使用更多线程下载，并启用aria2加速
-        echo "开始并行下载..."
-        time make download -j16 V=s
-        
-        # 清理下载失败的文件
+        make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
         
