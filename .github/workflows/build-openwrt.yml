@@ -74,8 +74,8 @@ jobs:
       uses: easimon/maximize-build-space@master
       with:
         swap-size-mb: 1024
-        temp-reserve-mb: 100
-        root-reserve-mb: 1024
+        temp-reserve-mb: 512
+        root-reserve-mb: 2048
 
     - name: Checkout
       uses: actions/checkout@main
@@ -109,7 +109,7 @@ jobs:
 
     - name: Cache Toolchain
       if: env.CACHE_TOOLCHAIN == 'true'
-      uses: HiGarfield/cachewrtbuild@main
+      uses: epph/cachewrtbuild@main
       with:
         ccache: false
         mixkey: ${{ env.SOURCE_REPO }}-${{ env.REPO_BRANCH }}-${{ env.DEVICE_TARGET }}-${{ env.DEVICE_SUBTARGET }}
@@ -129,10 +129,10 @@ jobs:
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
 
-    - name: Install ddns-go
-      run: |
-        cd openwrt
-        git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/ddns-go
+    # - name: Install ddns-go
+    #   run: |
+    #     cd openwrt
+    #     git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/ddns-go
 
     - name: Install argon
       run: |
