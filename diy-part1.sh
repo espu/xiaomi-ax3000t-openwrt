@@ -78,6 +78,11 @@ rm -rf feeds/small/trojan-plus
 rm -rf feeds/small/luci-app-ssr-plus
 rm -rf feeds/packages/luci-app-ssr-plus
 #
+
+rm -rf package/lean/ddns-scripts_aliyun
+rm -rf package/lean/ddns-scripts_dnspod
+rm -rf package/lean/ipv6-helper
+# 
 ./scripts/feeds install -a
 # 
 # rm -rf feeds/NueXini_Packages/luci-app-3proxy
